@@ -36,7 +36,7 @@ Os pesquisadores tem feito esta pergunta com relação a 451 pacientes com risco
 \item[]\termsub{Grupo de controle}{grupo de controle}. Paciente no grupo de controle recebem o mesmo medicamento do primeiro grupo, mas não recebem o stents.
 \end{itemize}
 Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de refenência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento. 
-Os pesquisadores estudaram os efeitos do stents em dois pontos: 30~dias após o início do experimento e 365~dias passados. Os resultados de 5 paciente estão resumidos na tabela Table~\ref{stentStudyResultsDF}. Os resultados foram marcados com ``infarto'' ou ``nenhum evento'', representando que o paciente nao teve infarto até o final da pesquisa.
+Os pesquisadores estudaram os efeitos do stents em dois pontos: 30~dias após o início do experimento e 365~dias passados. Os resultados de 5 paciente estão resumidos na tabela Table~\ref{stentStudyResultsDF}. Os resultador foram marcados com ``infarto'' ou ``nenhum evento'', representando que o paciente nao teve infarto até o final da pesquisa.
 
 \begin{table}[h]
 \centering
@@ -59,52 +59,51 @@ $\vdots$	&	$\vdots$	  &	$\vdots$ \\
 %% parei#aqui
 Considerando os dados de cada paciente individualmente levaria muito tempo, um caminho não viável para responder a questão original da pesquisa. Portanto, fazendo-se uma análise de dados estátisticos nos permite considerar os dados de todos os pacientes de uma única vez. Table~\ref{stentStudyResults} resume os dados brutos de uma maneira mais útil. Nesta tabela, nós rapidamente vemos o que acontece no estudo completo. Identificamos o número de paciente no grupo de tratamento que tiveram infarto dentro de 30 dias, olhando a esquerda da table no cruzamento da coluna infarto com a linha tratamento: 33
 
+Considering data from each patient individually would be a long, cumbersome path towards answering the original research question. Instead, performing a statistical data analysis allows us to consider all of the data at once. Table~\ref{stentStudyResults} summarizes the raw data in a more helpful way. In this table, we can quickly see what happened over the entire study. For instance, to identify the number of patients in the treatment group who had a stroke within 30 days, we look on the left-side of the table at the intersection of the treatment and stroke: 33.
+
 \begin{table}[h]
 \centering
 \begin{tabular}{l cc c cc}
-& \multicolumn{2}{c}{0-30 dias} &\hspace{5mm}\ & \multicolumn{2}{c}{0-365 dias} \\
+& \multicolumn{2}{c}{0-30 days} &\hspace{5mm}\ & \multicolumn{2}{c}{0-365 days} \\
   \cline{2-3} \cline{5-6}
-	& 	infarto 	& nenhum evento && 	infarto 	& nenhum evento \\
+	& 	stroke 	& no event && 	stroke 	& no event \\
   \hline
-tratamento 	& 33		& 191	&&	45 	& 179 \\
-controle 		& 13		& 214	&& 	28	& 199 \\
+treatment 	& 33		& 191	&&	45 	& 179 \\
+control 		& 13		& 214	&& 	28	& 199 \\
   \hline
 Total				& 46		& 405	&&	73	& 378 \\
   \hline
 \end{tabular}
-\caption{Estatística  para  o estudo sobre stent.}
+\caption{Descriptive statistics for the stent study.}
 \label{stentStudyResults}
 \end{table}
 
 \begin{exercise}
-Dos 224 paciente no grupo de tratamento, 45 tiveram infarto no primeiro ano. Usando estes dois números, calcule a proporção de pacientes no grupo de tratamento que tiveram um
-    infarto no primeiro ano. (Nota: respostas para todos os exercícios práticos nas notas de página.)\footnote{A proporção dos 224 paciente que tiveram infarto no período de 365 dias: $45/224 = 0.20$.}
+Of the 224 patients in the treatment group, 45 had a stroke by the end of the first year. Using these two numbers, compute the proportion of patients in the treatment group who had a stroke by the end of their first year. (Please note: answers to all Guided Practice exercises are provided using footnotes.)\footnote{The proportion of the 224 patients who had a stroke within 365 days: $45/224 = 0.20$.}
 \end{exercise}
 
-Podemos calcular uma sítese desta tabela. Ou seja um ``sumário estatístico'' é um número único que resume uma extensa quantidade de dados. \footnote{Formalmente, um sumário estatístico é um valor calculado dos dados. Alguns sumários estátisticos são mais úteis que outros. Por enquanto os resultados primários do estudo após 1~ano pode ser descrito por dois sumários estatísticos: a proporção de pessoas que tiveram infarto em tratamento pelas do grupo de tratamento.}
-
+We can compute summary statistics from the table. A \term{summary statistic} is a single number summarizing a large amount of data.\footnote{Formally, a summary statistic is a value computed from the data. Some summary statistics are more useful than others.} For instance, the primary results of the study after 1~year could be described by two summary statistics: the proportion of people who had a stroke in the treatment and control groups.
 \begin{itemize}
 \setlength{\itemsep}{0mm}
-\item[] Proporção de quem teve infarto no grupo de tratamento (stent): $45/224 = 0.20 = 20\%$.
-\item[] Proporção de quem teve infarto no grupo de controle: $28/227 = 0.12 = 12\%$.
+\item[] Proportion who had a stroke in the treatment (stent) group: $45/224 = 0.20 = 20\%$.
+\item[] Proportion who had a stroke in the control group: $28/227 = 0.12 = 12\%$.
 \end{itemize}
+These two summary statistics are useful in looking for differences in the groups, and we are in for a surprise: an additional 8\% of patients in the treatment group had a stroke! This is important for two reasons. First, it is contrary to what doctors expected, which was that stents would \emph{reduce} the rate of strokes. Second, it leads to a statistical question: do the data show a ``real'' difference between the groups?
 
-Estes dois sumários são úteis olhando as diferenças entre os grupos, nos causa surpresa : 8\% dos pacientes no grupo de tratamento tiveram infarto! Isto é importante por duas rasões. Primeiro, isto contraria o esperado pelos médicos, que acretitavam que o stents, poderiam \emph{reduzir} a taxa de infartos. Segundo, isto produz a seguinte questão estatística: os dados mostram uma ``real'' diferença entre os grupos?
+This second question is subtle. Suppose you flip a coin 100 times. While the chance a coin lands heads in any given coin flip is 50\%, we probably won't observe exactly 50 heads. This type of fluctuation is part of almost any type of data generating process. It is possible that the 8\% difference in the stent study is due to this natural variation. However, the larger the difference we observe (for a particular sample size), the less believable it is that the difference is due to chance. So what we are really asking is the following: is the difference so large that we should reject the notion that it was due to chance?
 
-Sobre esta segunda questão surgida. Suponha que você jogue uma modeda 100 vezes. Enquanto a chance de dar cara é 50\%, provavelmente nós não observaremos esta probabilidade exatamente. Este tipo de flutuação é parte de quase qualquer tipo de geração de dados. É possível que a diferença de 8\% no estudo sobre stents, é uma variação normal. De quelquer forma diferenças maiores observadas (para um particular quantidade de dados), é menos confiável que seja apenas uma flutuação natural. Então devemos nos perguntar: esta diferença é grande o bastante para desprezarmos a possibilidade de flutuação natural na produção dos dados ?
+While we don't yet have our statistical tools to fully address this question on our own, we can comprehend the conclusions of the published analysis: there was compelling evidence of harm by stents in this study of stroke patients.
 
-Enquanto ainda não temos ferramentas estatísticas para abordarmos esta questão, nós poderiámos concluir por estas análises: existem evidências para desaconselhar o uso de stents neste estudo de pacientes cardíacos.
-
-\textbf{Seja cuidadoso:} não generalize os resultados deste estudo para todos os pacientes e todos os tipos de stents. Este estudo varificou pacientes com algumas variáveis específicas, voluntários para serem parte do estudo e podem não serem representativos no universo de pacientes cardiácos. Temos também muitos tipos de stents e este estudo considerou apenas o auto-espansivel Wingspan stent (Boston Scientific). De qualquer forma, este estudo é uma lição importante para nós: pode ainda nos surpreender.
+\textbf{Be careful:} do not generalize the results of this study to all patients and all stents. This study looked at patients with very specific characteristics who volunteered to be a part of this study and who may not be representative of all stroke patients. In addition, there are many types of stents and this study only considered the self-expanding Wingspan stent (Boston Scientific). However, this study does leave us with an important lesson: we should keep our eyes open for surprises.
 
 \index{data!stroke|)}
 
-\section[Dados básico]{Dados básico \sectionvideohref{youtube-Mjif8PTgzUs&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
+\section[Data basics]{Data basics \sectionvideohref{youtube-Mjif8PTgzUs&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{dataBasics}
 
-Efetiva representação e descrição dos dados é o primeiro passo na mairia das análises. Esta sessão introduz uma estrutura para organização dos dados bem como alguma terminologia que será utilizada ao longo deste livro.
+Effective presentation and description of data is a first step in most analyses. This section introduces one structure for organizing data as well as some terminology that will be used throughout this book.
 
-\subsection{Observações, variáveis, e matriz de dados}
+\subsection{Observations, variables, and data matrices}
 
 \index{data!email50|(}
 
