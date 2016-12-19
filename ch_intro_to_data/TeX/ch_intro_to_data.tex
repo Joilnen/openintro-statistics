@@ -30,30 +30,29 @@ Nesta sessão iremos considerar um experimento que estuda a eficácia dos stents
 Stents reduzem o risco de infarto ?
 \end{quote}
 
-The researchers who asked this question collected data on 451 at-risk patients. Each volunteer patient was randomly assigned to one of two groups:
+Os pesquisadores tem feito esta pergunta com relação a 451 pacientes com risco de infarto. Cada um dos pacientes voluntários foi aleatoriamente incluído em um de dois grupos:
 \begin{itemize}
-\item[]\termsub{Treatment group}{treatment group}. Patients in the treatment group received a stent and medical management. The medical management included medications, management of risk factors, and help in lifestyle modification.
-\item[]\termsub{Control group}{control group}. Patients in the control group received the same medical management as the treatment group, but they did not receive stents.
+\item[]\termsub{Grupo de tratamento}{grupo de tratamenteo group}. Paciente neste grupo recebem um stent e medicação. A medicação tem efeito terapeutico, mudanças nos fatores de rico e ajuda na mudança do estilo de vidan.
+\item[]\termsub{Grupo de controle}{grupo de controle}. Paciente no grupo de controle recebem o mesmo medicamento do primeiro grupo, mas não recebem o stents.
 \end{itemize}
-Researchers randomly assigned 224 patients to the treatment group and 227 to the control group. In this study, the control group provides a reference point against which we can measure the medical impact of stents in the treatment group.
-
-Researchers studied the effect of stents at two time points: 30~days after enrollment and 365~days after enrollment. The results of 5 patients are summarized in Table~\ref{stentStudyResultsDF}. Patient outcomes are recorded as ``stroke'' or ``no event'', representing whether or not the patient had a stroke at the end of a time period.
+Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de refenência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento. 
+Os pesquisadores estudaram os efeitos do stents em dois pontos: 30~dias após o início do experimento e 365~dias passados. Os resultados de 5 paciente estão resumidos na tabela Table~\ref{stentStudyResultsDF}. Os resultador foram marcados com ``infarto'' ou ``nenhum evento'', representando que o paciente nao teve infarto até o final da pesquisa.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{l ccc}
 \hline
-Patient	&	group	&	0-30 days 	&	0-365 days \\
+Paciente	&	grupo	&	0-30 dias 	&	0-365 dias \\
 \hline
-1		&	treatment &	no event &	no event \\
-2		&	treatment &	stroke & stroke \\
-3		&	treatment &	no event & no event \\
+1		&	tratamento &	nenhum evento &	nenhum evento \\
+2		&	tratamento &	infarto & infarto \\
+3		&	tratamento &	nenhum evento & nenhum evento \\
 $\vdots$	&	$\vdots$	  &	$\vdots$ \\
-450	&	control &	no event &	no event \\
-451	&	control &	no event &	no event \\
+450	&	controle &	nenhum evento &	nenhum evento \\
+451	&	controle &	nenhum evento &	nenhum evento \\
 \hline
 \end{tabular}
-\caption{Results for five patients from the stent study.}
+\caption{Resultados para 5 paciente no estudo sobre stents.}
 \label{stentStudyResultsDF}
 % trmt <- c(rep('trmt', 224), rep('control', 227)); outcome30 <- c(rep(c('event', 'no_event'), c(33, 191)), rep(c('event', 'no_event'), c(13, 214))); outcome365 <- c(rep(c('event', 'no_event'), c(33, 191)), rep(c('event', 'no_event'), c(13, 214)))
 \end{table}
