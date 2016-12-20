@@ -102,32 +102,31 @@ Enquanto ainda não temos ferramentas estatísticas para abordarmos esta questã
 \section[Dados básico]{Dados básico \sectionvideohref{youtube-Mjif8PTgzUs&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{dataBasics}
 
-Efetiva representação e descrição dos dados é o primeiro passo na mairia das análises. Esta sessão introduz uma estrutura para organização dos dados bem como alguma terminologia que será utilizada ao longo deste livro.
+Efetiva representação e descrição dos dados é o primeiro passo na maioria das análises. Esta sessão introduz uma estrutura para organização dos dados bem como alguma terminologia que será utilizada ao longo deste livro.
 
 \subsection{Observações, variáveis, e matriz de dados}
 
 \index{data!email50|(}
 
-Table~\ref{email50DF} displays rows 1, 2, 3, and 50 of a data set concerning 50 emails received during early 2012. These observations will be referred to as the \data{email50} data set, and they are a random sample from a larger data set that we will see in Section~\ref{categoricalData}.
+Table~\ref{email50DF} mostra colunas 1, 2, 3, e 50 do conjunto de dados relativos a 50 emails recebidos durante o começo de 2012. Estas observações serão referenciadas como \data{email50} data set, e são uma amostra aleatória de um extenso conjunto quem pode ser visto aqui Section~\ref{categoricalData}.
 
-Each row in the table represents a single email or \term{case}.\footnote{A case is also sometimes called a \term{unit of observation} or an \term{observational unit}.} The columns represent characteristics, called \termsub{variables}{variable}, for each of the emails. For example, the first row represents email 1, which is a not spam, contains 21,705 characters, 551 line breaks, is written in HTML format, and contains only small numbers.
+Cada linha na tabela representa um único email ou \term{caso}.\footnote{Um caso pode ser chamado também \term{unidade de observação} ou uma \term{unidade observacional}.} As colunas representam características, chamadas \termsub{variables}{variable}, para cada um dos emails. Por exemplo, a primeira linha representa email 1, o qual não é spam, contém 21, 705 caracteres, 551 quebras de linha, está escrito em no formato HTML, e contém apenas números pequenos.
 
-In practice, it is especially important to ask clarifying questions to ensure important aspects of the data are understood. For instance, it is always important to be sure we know what each variable means and the units of measurement. Descriptions of all five email variables are given in Table~\ref{email50Variables}.
-
+Na prática, é especialmente importante perguntar e deixar claro questões importante sobre os aspéctos dos dados a serem esntendidos. De agora em diante, será sempre importante estarmos certo do que cada variável significa e as unidade em que foram medidas. Descrições de todas as cinco variáveis dos emails dadas na tabela Table~\ref{email50Variables}. 
 \begin{table}[t]
 \centering
 \begin{tabular}{cc ccc c}
   \hline
- & \var{spam} & \var{num\_\hspace{0.3mm}char} & \var{line\_\hspace{0.3mm}breaks} & \var{format} & \var{number} \\ 
+ & \var{spam} & \var{num\_\hspace{0.3mm}carac} & \var{quebra\_\hspace{0.3mm}linha} & \var{formato} & \var{número} \\ 
   \hline
-1 & no & 21,705 & 551 & html & small \\ 
-  2 & no & 7,011 & 183 & html & big \\ 
-  3 & yes & 631 & 28 & text & none \\ 
+1 & não & 21,705 & 551 & html & pequeno \\ 
+  2 & não & 7,011 & 183 & html & grande \\ 
+  3 & sim & 631 & 28 & text & none \\ 
 $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
-  50 & no & 15,829 & 242 & html & small \\ 
+  50 & não & 15,829 & 242 & html & pequeno \\ 
    \hline
 \end{tabular}
-\caption{Four rows from the \data{email50} data matrix.}
+\caption{Quatro linhas de \data{email50} matriz de dados.}
 \label{email50DF}
 \end{table}
 % library(openintro); library(xtable); data(email50); email50[c(1,2,3,50),c("spam", "num_char", "line_breaks", "format", "number")]; xtable(email50[c(1,2,3,50),c("spam", "num_char", "line_breaks", "format", "number")], digits=0)
@@ -137,24 +136,24 @@ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
 \centering\small
 \begin{tabular}{lp{10.5cm}}
 \hline
-{\bf variable} & {\bf description} \\
+{\bf variáveis} & {\bf descrição} \\
 \hline
-\var{spam} & Specifies whether the message was spam \\
-\var{num\_\hspace{0.3mm}char} & The number of characters in the email   \\
-\var{line\_\hspace{0.3mm}breaks} & The number of line breaks in the email (not including text wrapping)   \\
-\var{format} & Indicates if the email contained special formatting, such as bolding, tables, or links, which would indicate the message is in HTML format    \\
-\var{number} & Indicates whether the email contained no number, a small number (under 1 million), or a large number   \\
+\var{spam} & Especifica qualquer email spam \\
+\var{num\_\hspace{0.3mm}carac} & O número de caracteres do email \\
+\var{quebra\_\hspace{0.3mm}linha} & O número de quebra de linhas no email (não incluído continuação na linha seguinte)   \\
+\var{formato} & Indica se o email contém formato especial, como negrito, tableas ou links, os quais indicam que o email está em conteúdo formatado como HTML   \\
+    \var{número} & Indica que o email não está contido em nenhum número, num pequeno número (menos que 1 milhão), ou um número maior   \\
 \hline
 \end{tabular}
-\caption{Variables and their descriptions for the \data{email50} data set.\textC{\vspace{-3.5mm}}}
+\caption{Descrições das variáveis \data{email50} conjunto de dados.\textC{\vspace{-3.5mm}}}
 \label{email50Variables}
 \end{table}
 
 \index{data!email50|)}
 
-The data in Table~\ref{email50DF} represent a \term{data matrix}, which is a common way to organize data. Each row of a data matrix corresponds to a unique case, and each column corresponds to a variable. A data matrix for the stroke study introduced in Section~\ref{basicExampleOfStentsAndStrokes} is shown in Table~\vref{stentStudyResultsDF}, where the cases were patients and there were three variables recorded for each patient.
+Os dados na tabela Table~\ref{email50DF} reprensenta um term{matriz de dados}, o qual é um jeito comum de organizar os dados. Cada linha da matriz de dados corresponde a únic caso, e cada coluna corresponde a uma variável. Uma matriz de dados para o estudo sobre infartos mostrado na Section~\ref{basicExampleOfStentsAndStrokes} é mostrado na Table~\vref{stentStudyResultsDF}, onde os caso foram paciente e tínhamos três variáveis registrado para cada paciente. 
 
-Data matrices are a convenient way to record and store data. If another individual or case is added to the data set, an additional row can be easily added. Similarly, another column can be added for a new variable.
+Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, ou caso é adicionado ao conjunto de dados, uma adicional linha pode ser facilmente adicionada. Similarmente, outra coluna pode ser adicionada para uma nova variável.
 
 \index{data!county|(}
 
