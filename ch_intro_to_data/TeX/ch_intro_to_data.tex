@@ -158,18 +158,18 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \index{data!county|(}
 
 \begin{exercise}
-We consider a publicly available data set that summarizes information about the 3,143 counties in the United States, and we call this the \data{county} data set. This data set includes information about each county: its name, the state where it resides, its population in 2000 and 2010, per capita federal spending, poverty rate, and five additional characteristics. How might these data be organized in a data matrix? Reminder: look in the footnotes for answers to in-text exercises.\footnote{Each county may be viewed as a case, and there are eleven pieces of information recorded for each case. A table with 3,143 rows and 11 columns could hold these data, where each row represents a county and each column represents a particular piece of information.}
+    Nós consideramos um conjunto de dados publicamente disponível o que resume informações dos 3.143 municípios dos Estados Unidos, chamaremos isto \data{county} conjunto de datos. Este conjunto de dados inclui informação sobre cada município: nome, estado onde se localiza, sua populaçao entre 2000 e 2010, gasto percápito, taxa de pobreza, e cinco características adicionais. Como devem estes dados serem organizado numa matriz de dados? Lembre: olhe para as notas na base das páginas para verificas as respostas dos exercícios no texto.\footnote{Cada município pode ser visto como um case, e há onze informações específicas para cada município vistas no case. Uma tablea com 3.143 linhas e 11 colunas contendo os dados, onde cada linha representa um município e cada coluna uma informação específica.}
 \end{exercise}
 
-\noindent Seven rows of the \data{county} data set are shown in Table~\ref{countyDF}, and the variables are summarized in Table~\ref{countyVariables}. These data were collected from the US Census website.\footnote{\oiRedirect{textbook-census_quick_facts}{quickfacts.census.gov/qfd/index.html}}
+\noindent Sete linhas do \data{county} conjunto de dados mostrados na Table~\ref{countyDF}, e as variáveis resumidas na Table~\ref{countyVariables}. Estes dados foram coletados do US Cesnsus website.\footnote{\oiRedirect{textbook-census_quick_facts}{quickfacts.census.gov/qfd/index.html}}
 
 \begin{landscape}
 \begin{table}
 \centering\small
 \begin{tabular}{ccc ccc ccc ccc}
 \hline
-& \var{name} & \var{state} & \var{pop2000} & \var{pop2010} &
-   \var{fed\_\hspace{0.3mm}spend} & \var{poverty} & \var{homeownership} & \var{multiunit} &
+& \var{nome} & \var{estado} & \var{pop2000} & \var{pop2010} &
+   \var{percátpito\_\hspace{0.3mm}gasto} & \var{tx. de pobreza} & \var{casa própria} & \var{muliunidade} &
    \var{income} & \var{med\_\hspace{0.3mm}income} & \var{smoking\_\hspace{0.3mm}ban} \\
 \hline
   1 & Autauga & AL & 43671 & 54571 & 6.068 & 10.6 & 77.5 & 7.2 & 24568 & 53255 & none \\
@@ -182,7 +182,7 @@ We consider a publicly available data set that summarizes information about the 
   3143 & Weston & WY & 6644 & 7208 & 6.695 & 7.9 & 77.9 & 6.5 & 28463 & 53853 & none \\ 
 \hline
 \end{tabular}
-\caption{Seven rows from the \data{county} data set.}
+\caption{Sete linhas do \data{county} conjunto de dados.}
 \label{countyDF}
 % library(openintro); county <- countyComplete[,c("name", "state", "pop2000", "pop2010", "fed_spending", "poverty", "home_ownership", "housing_multi_unit", "per_capita_income", "median_household_income")]; colnames(county) <- c("name", "state", "pop2000", "pop2010", "fed_spend", "poverty", "homeownership", "multiunit", "income", "med_income"); county$fed_spend <- county$fed_spend / county$pop2010
 
@@ -203,7 +203,7 @@ We consider a publicly available data set that summarizes information about the 
 \var{poverty}  &  Percent of the population in poverty \\
 \var{homeownership}  &  Percent of the population that lives in their own home or lives with the owner (e.g. children living with parents who own the home) \\
 \var{multiunit}  &  Percent of living units that are in multi-unit structures (e.g. apartments) \\
-\var{income} & Income per capita \\
+\var{renda} & Renda per capita \\
 \var{med\_\hspace{0.3mm}income} & Median household income for the county, where a household's income equals the total income of its occupants who are 15 years or older \\
 \var{smoking\_\hspace{0.3mm}ban}  &  Type of county-wide smoking ban in place at the end of 2011, which takes
 			one of three values: \resp{none}, \resp{partial}, or \resp{comprehensive},
