@@ -169,17 +169,17 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \begin{tabular}{ccc ccc ccc ccc}
 \hline
 & \var{nome} & \var{estado} & \var{pop2000} & \var{pop2010} &
-   \var{percátpito\_\hspace{0.3mm}gasto} & \var{tx. de pobreza} & \var{casa própria} & \var{muliunidade} &
-   \var{income} & \var{med\_\hspace{0.3mm}income} & \var{smoking\_\hspace{0.3mm}ban} \\
+   \var{percátpito\_\hspace{0.3mm}gasto} & \var{tx. de pobreza} & \var{casa própria} & \var{multi} &
+   \var{renda} & \var{renda\_\hspace{0.3mm}média} & \var{poluíção\_disp\hspace{0.3mm}} \\
 \hline
-  1 & Autauga & AL & 43671 & 54571 & 6.068 & 10.6 & 77.5 & 7.2 & 24568 & 53255 & none \\
-  2 & Baldwin & AL & 140415 & 182265 & 6.140 & 12.2 & 76.7 & 22.6 & 26469 & 50147 & none \\ 
-  3 & Barbour & AL & 29038 & 27457 & 8.752 & 25.0 & 68.0 & 11.1 & 15875 & 33219 & none \\ 
-  4 & Bibb & AL & 20826 & 22915 & 7.122 & 12.6 & 82.9 & 6.6 & 19918 & 41770 & none \\ 
-  5 & Blount & AL & 51024 & 57322 & 5.131 & 13.4 & 82.0 & 3.7 & 21070 & 45549 & none \\ 
+  1 & Autauga & AL & 43671 & 54571 & 6.068 & 10.6 & 77.5 & 7.2 & 24568 & 53255 & não \\
+  2 & Baldwin & AL & 140415 & 182265 & 6.140 & 12.2 & 76.7 & 22.6 & 26469 & 50147 & não \\ 
+  3 & Barbour & AL & 29038 & 27457 & 8.752 & 25.0 & 68.0 & 11.1 & 15875 & 33219 & não \\ 
+  4 & Bibb & AL & 20826 & 22915 & 7.122 & 12.6 & 82.9 & 6.6 & 19918 & 41770 & não \\ 
+  5 & Blount & AL & 51024 & 57322 & 5.131 & 13.4 & 82.0 & 3.7 & 21070 & 45549 & não \\ 
   $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
-  3142 & Washakie & WY & 8289 & 8533 & 8.714 & 5.6 & 70.9 & 10.0 & 28557 & 48379 & none \\ 
-  3143 & Weston & WY & 6644 & 7208 & 6.695 & 7.9 & 77.9 & 6.5 & 28463 & 53853 & none \\ 
+  3142 & Washakie & WY & 8289 & 8533 & 8.714 & 5.6 & 70.9 & 10.0 & 28557 & 48379 & não \\ 
+  3143 & Weston & WY & 6644 & 7208 & 6.695 & 7.9 & 77.9 & 6.5 & 28463 & 53853 & não \\ 
 \hline
 \end{tabular}
 \caption{Sete linhas do \data{county} conjunto de dados.}
@@ -193,32 +193,30 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \centering\small
 \begin{tabular}{lp{11cm}}
 \hline
-{\bf variable} & {\bf description} \\
+{\bf variável} & {\bf descrição} \\
 \hline
-\var{name} & County name \\
-\var{state} & State where the county resides (also including the District of Columbia) \\
-\var{pop2000} & Population in 2000 \\
-\var{pop2010} & Population in 2010 \\
-\var{fed\_\hspace{0.3mm}spend} & Federal spending per capita \\
-\var{poverty}  &  Percent of the population in poverty \\
-\var{homeownership}  &  Percent of the population that lives in their own home or lives with the owner (e.g. children living with parents who own the home) \\
-\var{multiunit}  &  Percent of living units that are in multi-unit structures (e.g. apartments) \\
+\var{name} & Nome do município \\
+\var{state} & Estado onde o município se localisa (incluíndo o Distrito de Columbia) \\
+\var{pop2000} & População in 2000 \\
+\var{pop2010} & População in 2010 \\
+\var{percápito\_\hspace{0.3mm}gasto} & Federal gasto perçapito \\
+\var{tx. de pobreza}  &  Percentual da população na pobreza \\
+\var{casa própria}  &  Percentual da população que possiu e mora em casa própria (crianças morando com pais que vivem em casas próprias) \\
+\var{multi}  &  Percentual de moradias que são várias unidade juntas (ex: apartamentos) \\
 \var{renda} & Renda per capita \\
-\var{med\_\hspace{0.3mm}income} & Median household income for the county, where a household's income equals the total income of its occupants who are 15 years or older \\
-\var{smoking\_\hspace{0.3mm}ban}  &  Type of county-wide smoking ban in place at the end of 2011, which takes
-			one of three values: \resp{none}, \resp{partial}, or \resp{comprehensive},
-			where a \resp{comprehensive} ban means smoking
-			was not permitted in restaurants, bars, or workplaces, and \resp{partial}
-			means smoking was banned in at least one of those three locations \\
+\var{renda\_\hspace{0.3mm}média} & Median da renda da moradia, condirado o total da renda dos ocupantes da casa com idade igual ou superior a 15 anos \\
+\var{poluição\_disp\hspace{0.3mm}}  &  Tipo de município amplo e com satisfatória dispersão da poluíção até o fim de 2011, valores possíveis, um dos três:
+			\resp{não}, \resp{parcial}, or \resp{ok},
+			onde \resp{ok}  significa efetiva disperção da poluíção \\
 \hline
 \end{tabular}
 \centering
-\caption{Variables and their descriptions for the \data{county} data set.}
+\caption{Variáveis e suas descrições para \data{county} conjunto de dados.}
 \label{countyVariables}
 \end{table}
 \end{landscape}
 
-\subsection{Types of variables}
+\subsection{Tipos de variáveis}
 \label{variableTypes}
 
 Examine the \var{fed\_\hspace{0.3mm}spend}, \var{pop2010}, \var{state}, and \var{smoking\_\hspace{0.3mm}ban} variables in the \data{county} data set. Each of these variables is inherently different from the other three yet many of them share certain characteristics.
