@@ -257,25 +257,24 @@ Muitas análises são motivadas pela procura de relacionamentos entre duas ou ma
 
 Para responder estas questões, os dados devem ser coletados, tais como \data{county} conjunto de dados mostrando no Table~\ref{countyDF}. Examinando resumo de estatíticas  \data{summary statistics} poderia fornecer alguma ideia sobre cada uma das três questões sobre municípios. Adicionalmente, gráficos podem ser usados para a visualização dos dados que são sumarizados e também úteis para responder as questões.
  
-\indexthis{Scatterplots}{scatterplot} are one type of graph used to study the relationship between two numerical variables. Figure~\ref{county_fed_spendVsPoverty} compares the variables \var{fed\_\hspace{0.3mm}spend} and \var{poverty}. Each point on the plot represents a single county. For instance, the highlighted dot corresponds to County~1088 in the \data{county} data set: Owsley County, Kentucky, which had a poverty rate of 41.5\% and federal spending of \$21.50 per capita. The scatterplot suggests a relationship between the two variables: counties with a high poverty rate also tend to have slightly more federal spending. We might brainstorm as to why this relationship exists and investigate each idea to determine which is the most reasonable explanation.
+\indexthis{Scatterplots}{scatterplot} são um dos tipos de gráficos usados para estudar o relacionamento entre duas variáveis. Figure~\ref{county_fed_spendVsPoverty} compara as variáveis \var{fed\_\hspace{0.3mm}spend} e \var{poverty}. Cada ponto plotado representa um único município. Neste caso, os pontos destacados correspondem a County~1088 in o \data{county} conjunto de dados: Owsley County, Kentucky, o qual tem a pobreza a uma taxa de 41.5\% e um gasto federal de \$21.50 per capita. O scatterplot sugere um relacionamento entre duas variáveis: municípios com alta taxa de pobreza que também tem levemente uma tendência de maior gasto federal. Nós podemos pensar como e porque este relacionamento existe e investigar cada ideia para determinar qual é a explicação mais razoavel. 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{ch_intro_to_data/figures/county_fed_spendVsPoverty/county_fed_spendVsPoverty}
-\caption{A scatterplot showing \var{fed\_\hspace{0.3mm}spend} against \var{poverty}. Owsley County of Kentucky, with a poverty rate of 41.5\% and federal spending of \$21.50 per capita, is highlighted.}
+\caption{Um scatterplot mostrando \var{fed\_\hspace{0.3mm}spend} por \var{poverty}. Owsley County of Kentucky, com uma taxa de pobreza de 41.5\% e o gasto federal \$21.50 per capita, está destacado.}
 \label{county_fed_spendVsPoverty}
 \end{figure}
 
 \begin{exercise}
-Examine the variables in the \data{email50} data set, which are described in Table~\vref{email50Variables}. Create two questions about the relationships between these variables that are of interest to you.\footnote{Two sample questions: (1) Intuition suggests that if there are many line breaks in an email then there also would tend to be many characters: does this hold true? (2)~Is there a connection between whether an email format is plain text (versus HTML) and whether it is a spam message?}
+Examine as variáveis no \data{email50} conjunto de dados, as quais estão descritas em Table~\vref{email50Variables}. Crie duas questões sobre o relacionamento entre aquelas variáveis do seu interece.\footnote{Duas questões de amostra: (1) Intuição sugere que se há muitas quebras de linhas em um email então há também a tendencia de ter muitos caracteres: Isto é verdade ? (2)~Há uma conexão entre se um formato de email é texto plano (ou HTML) ou se isto é uma mensagem de spam ?}
 \end{exercise}
 
-The \var{fed\_\hspace{0.3mm}spend} and \var{poverty} variables are said to be associated because the plot shows a discernible pattern. When two variables show some connection with one another, they are called \term{associated} variables. Associated variables can also be called \term{dependent} variables and vice-versa.
+O \var{fed\_\hspace{0.3mm}spend} e \var{poverty} variáveis são ditos associados por que o gráfco mostra um padrão distinto. Quando duas variáveis mostra alguma conexão com outra, são chamadas variáveis \term{associdas}. Variáveis associadas podem também serem chamados variáveis \term{dependentes} e vice-versa.
 
-\begin{example}{This example examines the relationship between homeownership and the percent of units in multi-unit structures (e.g. apartments, condos), which is visualized using a scatterplot in Figure~\ref{multiunitsVsOwnership}. Are these variables associated?}
-It appears that the larger the fraction of units in multi-unit structures, the lower the homeownership rate. Since there is some relationship between the variables, they are associated.
+\begin{example}{Este exemplo examina o relacionamento entre propriétarios de casas e a porcentagem de estruturas de unidades múltiplas (ex. apartamentos, condomínios), o qual visualizando usando o scatterplot em Figure~\ref{multiunitsVsOwnership}. Há variáveis associadas ?}
+Isto mostra que na maior fração de unidades em estruturas de unidades múltiplas, o baixo taxa de proprietários de moradia própria. Desde que haja um relacionamento entre as variáveis, elas são ditas associadas. 
 \end{example}
-
 
 \begin{figure}
    \centering
