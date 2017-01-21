@@ -5,7 +5,7 @@
 %Understand basics about data organization, data types, numerical summaries of data, graphical summaries of data, and foundational techniques for data collection. We begin and end the chapter with case studies.}
 %\end{tipBox}
 
-Cientistas procuram responder questões usando métodos rigorosos e cuidadosas observações. Estas observações -- coletando de notas de campo, pesquisas, e experimentos -- formam a espinha dorsal da investigação estatística e são chamados \term{dados}. Estatítisca é o estudo de como melhor serem coletados, analisados, e desenhar conclusões dos dados. É útil pôrmos a estatística no contexto da processo geral de investigação:
+Cientistas procuram responder questões usando métodos rigorosos e cuidadosas observações. Estas observações -- coletando de notas de campo, pesquisas, e experimentos -- formam a espinha dorsal da investigação estatística e são chamados \term{dados}. Estatística é o estudo de como melhor serem coletados, analisados, e desenhar conclusões dos dados. É útil pormos a estatística no contexto da processo geral de investigação:
 \begin{enumerate}
 \setlength{\itemsep}{0mm}
 \item Identifique uma questão ou problema.
@@ -16,26 +16,26 @@ Cientistas procuram responder questões usando métodos rigorosos e cuidadosas o
 \end{enumerate}
 A estatística foca nos 2-4 objetivos, rigorosamente, e eficientemente. Com foco nestas três premissas: Qual a melhor forma de coletar os dados ? Como deveria ser analisado ? E o que podemos inferir desta análise ?
 
-Os assuntos científicos são diversos como as questões por eles levantados. No entanto, muitas destas investigações podem ser abordadas com um peno número de técnicas de coleta de dados, ferramentas de análise, e conceito fundamental de inferência estatítica. Este capítulo traz uma introdução deste e outros temas que serão abordados neste livro. Introduzimos os princípios básicos de cada tópico e estudaremos algumas ferramentas. Iremos também trazer questões de outras áreas não tipicamente associadas com a ciência, mas com um benefício importante no estudo da estatística.
+Os assuntos científicos são diversos como as questões por eles levantados. No entanto, muitas destas investigações podem ser abordadas com um peno número de técnicas de coleta de dados, ferramentas de análise, e conceito fundamental de inferência estatística. Este capítulo traz uma introdução deste e outros temas que serão abordados neste livro. Introduzimos os princípios básicos de cada tópico e estudaremos algumas ferramentas. Iremos também trazer questões de outras áreas não tipicamente associadas com a ciência, mas com um benefício importante no estudo da estatística.
 
 \section[Estudo de caso: usando stents para prevenir infartos]{Estudo de caso: usando stents para prevenir infartos \sectionvideohref{youtube-nEHFF1ADpWE&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{basicExampleOfStentsAndStrokes}
 
 \index{data!stroke|(}
 
-Sessão~\ref{basicExampleOfStentsAndStrokes} introduz um desafio clássico em estatística: avaliando a eficiência de um tratamento médico. Abordado nesta sessao, e tambem no resto do capítulo com mais detalhes, e revisado ao fim do texto. O plano agora e simplesmente entendermos o papel que a estatística pode ter na prática.
+Sessão~\ref{basicExampleOfStentsAndStrokes} introduz um desafio clássico em estatística: avaliando a eficiência de um tratamento médico. Abordado nesta sessão, e também no resto do capítulo com mais detalhes, e revisado ao fim do texto. O plano agora e simplesmente entendermos o papel que a estatística pode ter na prática.
 
-Nesta sessão iremos considerar um experimento que estuda a eficácia dos stents no tratamento de paciente com risco de infarto.\footnote{Chimowitz MI, Lynn MJ, Derdeyn CP, et al. 2011. Stenting versus Aggressive Medical Therapy for Intracranial Arterial Stenosis. New England Journal of Medicine 365:993-1003. \oiRedirect{textbook-nejm_stent_study}{www.nejm.org/doi/full/10.1056/NEJMoa1105335}. NY Times article reporting on the study: \oiRedirect{textbook-nytimes_stent_study}{www.nytimes.com/2011/09/08/health/research/08stent.html}.} Stents são dispositivos instalados em vasos sanguíneos que ajudam a recuparação do paciente depois de um infarto e reduz o risco de um próximo infarto ou mesmo a morte. Muitos médicos acreditam em um benefício similar para paciente com risco de infarto. A principal questão a ser respondida é:
+Nesta sessão iremos considerar um experimento que estuda a eficácia dos stents no tratamento de paciente com risco de infarto.\footnote{Chimowitz MI, Lynn MJ, Derdeyn CP, et al. 2011. Stenting versus Aggressive Medical Therapy for Intracranial Arterial Stenosis. New England Journal of Medicine 365:993-1003. \oiRedirect{textbook-nejm_stent_study}{www.nejm.org/doi/full/10.1056/NEJMoa1105335}. NY Times article reporting on the study: \oiRedirect{textbook-nytimes_stent_study}{www.nytimes.com/2011/09/08/health/research/08stent.html}.} Stents são dispositivos instalados em vasos sanguíneos que ajudam a recuperação do paciente depois de um infarto e reduz o risco de um próximo infarto ou mesmo a morte. Muitos médicos acreditam em um benefício similar para paciente com risco de infarto. A principal questão a ser respondida é:
 \begin{quote}
 Stents reduzem o risco de infarto ?
 \end{quote}
 
 Os pesquisadores tem feito esta pergunta com relação a 451 pacientes com risco de infarto. Cada um dos pacientes voluntários foi aleatoriamente incluído em um de dois grupos:
 \begin{itemize}
-\item[]\termsub{Grupo de tratamento}{grupo de tratamenteo group}. Paciente neste grupo recebem um stent e medicação. A medicação tem efeito terapeutico, mudanças nos fatores de rico e ajuda na mudança do estilo de vidan.
+\item[]\termsub{Grupo de tratamento}{grupo de tratamento group}. Paciente neste grupo recebem um stent e medicação. A medicação tem efeito terapêutico, mudanças nos fatores de rico e ajuda na mudança do estilo de vidan.
 \item[]\termsub{Grupo de controle}{grupo de controle}. Paciente no grupo de controle recebem o mesmo medicamento do primeiro grupo, mas não recebem o stents.
 \end{itemize}
-Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de refenência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento.
+Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de referência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento.
 Os pesquisadores estudaram os efeitos do stents em dois pontos: 30~dias após o início do experimento e 365~dias passados. Os resultados de 5 paciente estão resumidos na tabela Table~\ref{stentStudyResultsDF}. Os resultados foram marcados com ``infarto'' ou ``nenhum evento'', representando que o paciente nao teve infarto até o final da pesquisa.
 
 \begin{table}[h]
@@ -81,7 +81,7 @@ Dos 224 paciente no grupo de tratamento, 45 tiveram infarto no primeiro ano. Usa
     infarto no primeiro ano. (Nota: respostas para todos os exercícios práticos nas notas de página.)\footnote{A proporção dos 224 paciente que tiveram infarto no período de 365 dias: $45/224 = 0.20$.}
 \end{exercise}
 
-Podemos calcular uma sítese desta tabela. Ou seja, um ``sumário estatístico'' é um número único que resume uma extensa quantidade de dados. \footnote{Formalmente, um sumário estatístico é um valor calculado dos dados. Alguns sumários estátisticos são mais úteis que outros. Por enquanto os resultados primários do estudo após 1~ano pode ser descrito por dois sumários estatísticos: a proporção de pessoas que tiveram infarto em tratamento pelas do grupo de tratamento.}
+Podemos calcular uma síntese desta tabela. Ou seja, um ``sumário estatístico'' é um número único que resume uma extensa quantidade de dados. \footnote{Formalmente, um sumário estatístico é um valor calculado dos dados. Alguns sumários estátisticos são mais úteis que outros. Por enquanto os resultados primários do estudo após 1~ano pode ser descrito por dois sumários estatísticos: a proporção de pessoas que tiveram infarto em tratamento pelas do grupo de tratamento.}
 
 \begin{itemize}
 \setlength{\itemsep}{0mm}
@@ -91,11 +91,11 @@ Podemos calcular uma sítese desta tabela. Ou seja, um ``sumário estatístico''
 
 Estes dois sumários são úteis olhando as diferenças entre os grupos, nos causa surpresa : 8\% dos pacientes no grupo de tratamento tiveram infarto! Isto é importante por duas rasões. Primeiro, isto contraria o esperado pelos médicos, que acretitavam que o stents, poderiam \emph{reduzir} a taxa de infartos. Segundo, isto produz a seguinte questão estatística: os dados mostram uma ``real'' diferença entre os grupos?
 
-Sobre esta segunda questão surgida. Suponha que você jogue uma modeda 100 vezes. Enquanto a chance de dar cara é 50\%, provavelmente nós não observaremos esta probabilidade exatamente. Este tipo de flutuação é parte de quase qualquer tipo de geração de dados. É possível que a diferença de 8\% no estudo sobre stents, é uma variação normal. De qualquer forma, diferenças maiores observadas (para um particular quantidade de dados), é menos confiável que seja apenas uma flutuação natural. Então devemos nos perguntar: esta diferença é grande o bastante para desprezarmos a possibilidade de flutuação natural na produção dos dados ?
+Sobre esta segunda questão surgida. Suponha que você jogue uma moeda 100 vezes. Enquanto a chance de dar cara é 50\%, provavelmente nós não observaremos esta probabilidade exatamente. Este tipo de flutuação é parte de quase qualquer tipo de geração de dados. É possível que a diferença de 8\% no estudo sobre stents, é uma variação normal. De qualquer forma, diferenças maiores observadas (para um particular quantidade de dados), é menos confiável que seja apenas uma flutuação natural. Então devemos nos perguntar: esta diferença é grande o bastante para desprezarmos a possibilidade de flutuação natural na produção dos dados ?
 
-Enquanto ainda não temos ferramentas estatísticas para abordarmos esta questão, nós poderiámos concluir por estas análises: existem evidências para desaconselhar o uso de stents neste estudo de pacientes cardíacos.
+Enquanto ainda não temos ferramentas estatísticas para abordarmos esta questão, nós poderíamos concluir por estas análises: existem evidências para desaconselhar o uso de stents neste estudo de pacientes cardíacos.
 
-\textbf{Seja cuidadoso:} não generalize os resultados deste estudo para todos os pacientes e todos os tipos de stents. Este estudo varificou pacientes com algumas variáveis específicas, voluntários para serem parte do estudo e podem não serem representativos no universo de pacientes cardiácos. Temos também muitos tipos de stents e este estudo considerou apenas o auto-espansivel Wingspan stent (Boston Scientific). De qualquer forma, este estudo é uma lição importante para nós: pode ainda nos surpreender.
+\textbf{Seja cuidadoso:} não generalize os resultados deste estudo para todos os pacientes e todos os tipos de stents. Este estudo verificou pacientes com algumas variáveis específicas, voluntários para serem parte do estudo e podem não serem representativos no universo de pacientes cardíacos. Temos também muitos tipos de stents e este estudo considerou apenas o auto-expansível Wingspan stent (Boston Scientific). De qualquer forma, este estudo é uma lição importante para nós: pode ainda nos surpreender.
 
 \index{data!stroke|)}
 
@@ -112,7 +112,7 @@ Table~\ref{email50DF} mostra colunas 1, 2, 3, e 50 do conjunto de dados relativo
 
 Cada linha na tabela representa um único email ou \term{caso}.\footnote{Um caso pode ser chamado também \term{unidade de observação} ou uma \term{unidade observacional}.} As colunas representam características, chamadas \termsub{variables}{variable}, para cada um dos emails. Por exemplo, a primeira linha representa email 1, o qual não é spam, contém 21, 705 caracteres, 551 quebras de linha, está escrito em no formato HTML, e contém apenas números pequenos.
 
-Na prática, é especialmente importante perguntar e deixar claro questões importantes sobre os aspéctos dos dados a serem esntendidos. De agora em diante, será sempre importante estarmos certo do que cada variável significa e as unidade em que foram medidas. Descrições de todas as cinco variáveis dos emails dadas na tabela Table~\ref{email50Variables}.
+Na prática, é especialmente importante perguntar e deixar claro questões importantes sobre os aspectos dos dados a serem estendidos. De agora em diante, será sempre importante estarmos certo do que cada variável significa e as unidade em que foram medidas. Descrições de todas as cinco variáveis dos emails dadas na tabela Table~\ref{email50Variables}.
 \begin{table}[t]
 \centering
 \begin{tabular}{cc ccc c}
@@ -151,14 +151,14 @@ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
 
 \index{data!email50|)}
 
-Os dados na tabela Table~\ref{email50DF} reprensenta um term{matriz de dados}, o qual é um jeito comum de organizar os dados. Cada linha da matriz de dados corresponde a únic caso, e cada coluna corresponde a uma variável. Uma matriz de dados para o estudo sobre infartos mostrado na Section~\ref{basicExampleOfStentsAndStrokes} é mostrado na Table~\vref{stentStudyResultsDF}, onde os caso foram paciente e tínhamos três variáveis registrado para cada paciente.
+Os dados na tabela Table~\ref{email50DF} representa um term{matriz de dados}, o qual é um jeito comum de organizar os dados. Cada linha da matriz de dados corresponde a únic caso, e cada coluna corresponde a uma variável. Uma matriz de dados para o estudo sobre infartos mostrado na Section~\ref{basicExampleOfStentsAndStrokes} é mostrado na Table~\vref{stentStudyResultsDF}, onde os caso foram paciente e tínhamos três variáveis registrado para cada paciente.
 
 Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, ou caso é adicionado ao conjunto de dados, uma adicional linha pode ser facilmente adicionada. Similarmente, outra coluna pode ser adicionada para uma nova variável.
 
 \index{data!county|(}
 
 \begin{exercise}
-    Nós consideramos um conjunto de dados publicamente disponível o que resume informações dos 3.143 municípios dos Estados Unidos, chamaremos isto \data{county} conjunto de datos. Este conjunto de dados inclui informação sobre cada município: nome, estado onde se localiza, sua populaçao entre 2000 e 2010, gasto percápito, taxa de pobreza, e cinco características adicionais. Como devem estes dados serem organizado numa matriz de dados? Lembre: olhe para as notas na base das páginas para verificas as respostas dos exercícios no texto.\footnote{Cada município pode ser visto como um case, e há onze informações específicas para cada município vistas no case. Uma tablea com 3.143 linhas e 11 colunas contendo os dados, onde cada linha representa um município e cada coluna uma informação específica.}
+    Nós consideramos um conjunto de dados publicamente disponível o que resume informações dos 3.143 municípios dos Estados Unidos, chamaremos isto \data{county} conjunto de dados. Este conjunto de dados inclui informação sobre cada município: nome, estado onde se localiza, sua população entre 2000 e 2010, gasto percápito, taxa de pobreza, e cinco características adicionais. Como devem estes dados serem organizado numa matriz de dados? Lembre: olhe para as notas na base das páginas para verificas as respostas dos exercícios no texto.\footnote{Cada município pode ser visto como um case, e há onze informações específicas para cada município vistas no case. Uma tabela com 3.143 linhas e 11 colunas contendo os dados, onde cada linha representa um município e cada coluna uma informação específica.}
 \end{exercise}
 
 \noindent Sete linhas do \data{county} conjunto de dados mostrados na Table~\ref{countyDF}, e as variáveis resumidas na Table~\ref{countyVariables}. Estes dados foram coletados do US Cesnsus website.\footnote{\oiRedirect{textbook-census_quick_facts}{quickfacts.census.gov/qfd/index.html}}
@@ -170,7 +170,7 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \hline
 & \var{nome} & \var{estado} & \var{pop2000} & \var{pop2010} &
    \var{percátpito\_\hspace{0.3mm}gasto} & \var{tx. de pobreza} & \var{casa própria} & \var{multi} &
-   \var{renda} & \var{renda\_\hspace{0.3mm}média} & \var{poluíção\_disp\hspace{0.3mm}} \\
+   \var{renda} & \var{renda\_\hspace{0.3mm}média} & \var{poluição\_disp\hspace{0.3mm}} \\
 \hline
   1 & Autauga & AL & 43671 & 54571 & 6.068 & 10.6 & 77.5 & 7.2 & 24568 & 53255 & não \\
   2 & Baldwin & AL & 140415 & 182265 & 6.140 & 12.2 & 76.7 & 22.6 & 26469 & 50147 & não \\
@@ -196,7 +196,7 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 {\bf variável} & {\bf descrição} \\
 \hline
 \var{name} & Nome do município \\
-\var{state} & Estado onde o município se localisa (incluíndo o Distrito de Columbia) \\
+\var{state} & Estado onde o município se localiza (incluindo o Distrito de Columbia) \\
 \var{pop2000} & População in 2000 \\
 \var{pop2010} & População in 2010 \\
 \var{percápito\_\hspace{0.3mm}gasto} & Federal gasto perçapito \\
@@ -204,10 +204,10 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \var{casa própria}  &  Percentual da população que possiu e mora em casa própria (crianças morando com pais que vivem em casas próprias) \\
 \var{multi}  &  Percentual de moradias que são várias unidades juntas (ex: apartamentos) \\
 \var{renda} & Renda per capita \\
-\var{renda\_\hspace{0.3mm}média} & Median da renda da moradia, condirado o total da renda dos ocupantes da casa com idade igual ou superior a 15 anos \\
-\var{poluição\_disp\hspace{0.3mm}}  &  Tipo de município amplo e com satisfatória dispersão da poluíção até o fim de 2011, valores possíveis, um dos três:
+\var{renda\_\hspace{0.3mm}média} & Mediano da renda da moradia, considerado o total da renda dos ocupantes da casa com idade igual ou superior a 15 anos \\
+\var{poluição\_disp\hspace{0.3mm}}  &  Tipo de município amplo e com satisfatória dispersão da poluição até o fim de 2011, valores possíveis, um dos três:
 			\resp{não}, \resp{parcial}, or \resp{ok},
-			onde \resp{ok}  significa efetiva disperção da poluíção \\
+			onde \resp{ok}  significa efetiva disperção da poluição \\
 \hline
 \end{tabular}
 \centering
@@ -219,13 +219,13 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \subsection{Tipos de variáveis}
 \label{variableTypes}
 
-Examine o \var{gasto\_\hspace{0.3mm}federal}, \var{pop2010}, \var{estado}, and \var{disp\_\hspace{0.3mm}poluíção} variáveis no \data{county} conjunto de dados. Cada uma das variáveis é hierarquicamente diferente das outras com carcterísticas singulares.
+Examine o \var{gasto\_\hspace{0.3mm}federal}, \var{pop2010}, \var{estado}, and \var{disp\_\hspace{0.3mm}poluição} variáveis no \data{county} conjunto de dados. Cada uma das variáveis é hierarquicamente diferente das outras com características singulares.
 
-Primeiro consideramos \var{gasto\_\hspace{0.3mm}federal}, o qual foi dito ser variável \term{numérica} desde que isto pode ser uma longa faixa de valores, e isto é importante ser adicionado, subtraído, ou ter as médias destes valores. De outra forma, nós poderíamos classifica uma variável código de área telefonica como numérica, e a média, soma, diferença não ter significado claro algum.
+Primeiro consideramos \var{gasto\_\hspace{0.3mm}federal}, o qual foi dito ser variável \term{numérica} desde que isto pode ser uma longa faixa de valores, e isto é importante ser adicionado, subtraído, ou ter as médias destes valores. De outra forma, nós poderíamos classifica uma variável código de área telefónica como numérica, e a média, soma, diferença não ter significado claro algum.
 
-A variável \var{pop2010} também é numerica, apesar de parecer um pouco diferente de \var{gasto\_\hspace{0.3mm}federal}. Esta variável que conta a população apenas pode assumir valores não negativos (\resp{0}, \resp{1}, resp{2}, ...). Por esta razão, a variável da população é dita \term{discreta} desde que isto pode ser unicamente numera, e valores com saltos. De outra maneira, o gasto federal percápito é dita uma variável contínua
+A variável \var{pop2010} também é numérica, apesar de parecer um pouco diferente de \var{gasto\_\hspace{0.3mm}federal}. Esta variável que conta a população apenas pode assumir valores não negativos (\resp{0}, \resp{1}, resp{2}, ...). Por esta razão, a variável da população é dita \term{discreta} desde que isto pode ser unicamente numera, e valores com saltos. De outra maneira, o gasto federal percápito é dita uma variável contínua
 
-As variáveis \var{state} pode assumir até 51 valores como, alem de Washington, DC:  \resp{AL}, ..., and \resp{WY}. Respondem como categorias, \var{state} então é chamada variável categorica, e possíveis valores são chamados nível das variáveis.
+As variáveis \var{state} pode assumir até 51 valores como, alem de Washington, DC:  \resp{AL}, ..., and \resp{WY}. Respondem como categorias, \var{state} então é chamada variável categórica, e possíveis valores são chamados nível das variáveis.
 
 \begin{figure}
 \centering
@@ -234,30 +234,30 @@ As variáveis \var{state} pode assumir até 51 valores como, alem de Washington,
 \label{variables}
 \end{figure}
 
-Finalmente, considere a variável \var{smoking\_\hspace{0.3mm}ban}, a qual descreve o tipo de county-wide somokin band e guarda valores \resp{none}, \resp{parcia}, ou \resp{comprehensive} em cada município. Esta variável parece ser híbrida: é categórica, mas os níveis tem uma ordenação natural. Uma variável como esta propriedade é chamada \term{ordinal}, enquanto uma regular variavel categorica sem este tipo especial é conhecida \term{nominal}. Para simplificar as análises, qualquer variável neste livro será tratada como variáveis categóricas.
+Finalmente, considere a variável \var{smoking\_\hspace{0.3mm}ban}, a qual descreve o tipo de county-wide somokin band e guarda valores \resp{none}, \resp{parcia}, ou \resp{comprehensive} em cada município. Esta variável parece ser híbrida: é categórica, mas os níveis tem uma ordenação natural. Uma variável como esta propriedade é chamada \term{ordinal}, enquanto uma regular variavel categórica sem este tipo especial é conhecida \term{nominal}. Para simplificar as análises, qualquer variável neste livro será tratada como variáveis categóricas.
 
 \begin{example}{Dados onde são coletados estatísticas sobre os estudantes do curso. Três variáveis contém os seguintes itens: número de irmãos, altura, se o estudante já teve seus dados previamente verificados. Classifica cada uma das variáveis como numérica, discreta numérica ou categórica.}
 O número de irmãos e altura do estudante são representados por variáveis numéricas. O número de siblings é um contador discreto, as variáveis de altura são contínuas, então numérica contínua, e a última variável classifica os estudantes em duas categorias os que já tiveram e os quem não tiveram suas estatísticas auferidas, portanto, uma variável categórica.
 \end{example}
 
 \begin{exercise} \index{data!stroke}
-Considere as variáveis \var{group} e \var{outcome} (em 30 days) do estudo sobre uso do stent na Section~\ref{basicExampleOfStentsAndStrokes}. As variáveis numericas ou categóricas ? \footnote{Há apenas dois valores possíveis para cada variável, e nos dois casos eles descrevem categorias, portanto são variáveis categóricas, cada uma.}
+Considere as variáveis \var{group} e \var{outcome} (em 30 days) do estudo sobre uso do stent na Section~\ref{basicExampleOfStentsAndStrokes}. As variáveis numéricas ou categóricas ? \footnote{Há apenas dois valores possíveis para cada variável, e nos dois casos eles descrevem categorias, portanto são variáveis categóricas, cada uma.}
 \end{exercise}
 
 \subsection{Relacionamento entre as variáveis}
 \label{variableRelations}
 
-Muitas análises são motivadas pela procura de relacionamentos entre duas ou mais variáveis. Um cientísta social deve responder algumas das questões seguintes:
+Muitas análises são motivadas pela procura de relacionamentos entre duas ou mais variáveis. Um cientista social deve responder algumas das questões seguintes:
 \begin{enumerate}
 \setlength{\itemsep}{0mm}
 \item[(1)]\label{fedSpendingPovertyQuestion} O gasto da união, na média, alto ou baixo em municípios com altos índices de pobreza ?
-\item[(2)]\label{ownershipMultiUnitQuestion} Se o número de casas próprias é menor que a média nacional por munípios, e a porcentagem de multi-unidade de habitação está acima ou a baixo da média nacional ?
+\item[(2)]\label{ownershipMultiUnitQuestion} Se o número de casas próprias é menor que a média nacional por municípios, e a porcentagem de multi-unidade de habitação está acima ou a baixo da média nacional ?
 \item[(3)]\label{isAverageIncomeAssociatedWithSmokingBans} Quais municípios tem uma alta média de renda: destes quais tem leis contra o fumo e quais não ?
 \end{enumerate}
 
-Para responder estas questões, os dados devem ser coletados, tais como \data{county} conjunto de dados mostrando no Table~\ref{countyDF}. Examinando resumo de estatíticas  \data{summary statistics} poderia fornecer alguma ideia sobre cada uma das três questões sobre municípios. Adicionalmente, gráficos podem ser usados para a visualização dos dados que são sumarizados e também úteis para responder as questões.
+Para responder estas questões, os dados devem ser coletados, tais como \data{county} conjunto de dados mostrando no Table~\ref{countyDF}. Examinando resumo de estatísticas  \data{summary statistics} poderia fornecer alguma ideia sobre cada uma das três questões sobre municípios. Adicionalmente, gráficos podem ser usados para a visualização dos dados que são sumarizados e também úteis para responder as questões.
 
-\indexthis{Scatterplots}{scatterplot} são um dos tipos de gráficos usados para estudar o relacionamento entre duas variáveis. Figure~\ref{county_fed_spendVsPoverty} compara as variáveis \var{fed\_\hspace{0.3mm}spend} e \var{poverty}. Cada ponto plotado representa um único município. Neste caso, os pontos destacados correspondem a County~1088 in o \data{county} conjunto de dados: Owsley County, Kentucky, o qual tem a pobreza a uma taxa de 41.5\% e um gasto federal de \$21.50 per capita. O scatterplot sugere um relacionamento entre duas variáveis: municípios com alta taxa de pobreza que também tem levemente uma tendência de maior gasto federal. Nós podemos pensar como e porque este relacionamento existe e investigar cada ideia para determinar qual é a explicação mais razoavel.
+\indexthis{Scatterplots}{scatterplot} são um dos tipos de gráficos usados para estudar o relacionamento entre duas variáveis. Figure~\ref{county_fed_spendVsPoverty} compara as variáveis \var{fed\_\hspace{0.3mm}spend} e \var{poverty}. Cada ponto plotado representa um único município. Neste caso, os pontos destacados correspondem a County~1088 in o \data{county} conjunto de dados: Owsley County, Kentucky, o qual tem a pobreza a uma taxa de 41.5\% e um gasto federal de \$21.50 per capita. O scatterplot sugere um relacionamento entre duas variáveis: municípios com alta taxa de pobreza que também tem levemente uma tendência de maior gasto federal. Nós podemos pensar como e porque este relacionamento existe e investigar cada ideia para determinar qual é a explicação mais razoável.
 
 \begin{figure}
 \centering
@@ -267,12 +267,12 @@ Para responder estas questões, os dados devem ser coletados, tais como \data{co
 \end{figure}
 
 \begin{exercise}
-Examine as variáveis no \data{email50} conjunto de dados, as quais estão descritas em Table~\vref{email50Variables}. Crie duas questões sobre o relacionamento entre aquelas variáveis do seu interece.\footnote{Duas questões de amostra: (1) Intuição sugere que se há muitas quebras de linhas em um email então há também a tendência de ter muitos caracteres: Isto é verdade ? (2)~Há uma conexão entre se um formato de email é texto plano (ou HTML) ou se isto é uma mensagem de spam ?}
+Examine as variáveis no \data{email50} conjunto de dados, as quais estão descritas em Table~\vref{email50Variables}. Crie duas questões sobre o relacionamento entre aquelas variáveis do seu interesse.\footnote{Duas questões de amostra: (1) Intuição sugere que se há muitas quebras de linhas em um email então há também a tendência de ter muitos caracteres: Isto é verdade ? (2)~Há uma conexão entre se um formato de email é texto plano (ou HTML) ou se isto é uma mensagem de spam ?}
 \end{exercise}
 
-O \var{fed\_\hspace{0.3mm}spend} e \var{poverty} variáveis são ditos associados por que o gráfco mostra um padrão distinto. Quando duas variáveis mostram alguma conexão com outra, são chamadas variáveis \term{associdas}. Variáveis associadas podem também serem chamados variáveis \term{dependentes} e vice-versa.
+O \var{fed\_\hspace{0.3mm}spend} e \var{poverty} variáveis são ditos associados por que o gráfico mostra um padrão distinto. Quando duas variáveis mostram alguma conexão com outra, são chamadas variáveis \term{associadas}. Variáveis associadas podem também serem chamados variáveis \term{dependentes} e vice-versa.
 
-\begin{example}{Este exemplo examina o relacionamento entre propriétarios de casas e a porcentagem de estruturas de unidades múltiplas (ex. apartamentos, condomínios), o qual visualizando usando o scatterplot em Figure~\ref{multiunitsVsOwnership}. Há variáveis associadas ?}
+\begin{example}{Este exemplo examina o relacionamento entre proprietários de casas e a porcentagem de estruturas de unidades múltiplas (ex. apartamentos, condomínios), o qual visualizando usando o scatterplot em Figure~\ref{multiunitsVsOwnership}. Há variáveis associadas ?}
 Isto mostra que na maior fração de unidades em estruturas de unidades múltiplas, o baixo taxa de proprietários de moradia própria. Desde que haja um relacionamento entre as variáveis, elas são ditas associadas.
 \end{example}
 
@@ -285,7 +285,7 @@ Isto mostra que na maior fração de unidades em estruturas de unidades múltipl
 
 Por que existe uma tenendência descendente em Figure~\ref{multiunitsVsOwnership} -- países com mais unidade em estruturas de multiunidade estão associados a baixa taxa de pessoas com casa própria -- aquelas variáveis são distas \termsub{negativamente associadas}{negativamente associadas}. A \term{associação positiva} é mostrado o relacionamento entre\var{poverty} e \var{fed\_\hspace{0.3mm}spend} variáveis representada na Figure~\ref{county_fed_spendVsPoverty}, onde os municípios com mais altas taxas de pobreza tendem a receber mais ajuda federal per capita.
 
-se duas variáveis são não associadas, entam elas podem ser ditas \term{independentes}. Isto por que, duas variáveis são independentes se não evidência de relacionamenteo entre elas.
+se duas variáveis são não associadas, então elas podem ser ditas \term{independentes}. Isto por que, duas variáveis são independentes se não evidência de relacionamento entre elas.
 
 \begin{termBox}{\tBoxTitle{Associated or independent, not both}
  A pair of variables are either related in some way (associated) or not (independent). No pair of variables is both associated and independent.}
