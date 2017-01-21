@@ -35,7 +35,7 @@ Os pesquisadores tem feito esta pergunta com relação a 451 pacientes com risco
 \item[]\termsub{Grupo de tratamento}{grupo de tratamenteo group}. Paciente neste grupo recebem um stent e medicação. A medicação tem efeito terapeutico, mudanças nos fatores de rico e ajuda na mudança do estilo de vidan.
 \item[]\termsub{Grupo de controle}{grupo de controle}. Paciente no grupo de controle recebem o mesmo medicamento do primeiro grupo, mas não recebem o stents.
 \end{itemize}
-Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de refenência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento. 
+Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de refenência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento.
 Os pesquisadores estudaram os efeitos do stents em dois pontos: 30~dias após o início do experimento e 365~dias passados. Os resultados de 5 paciente estão resumidos na tabela Table~\ref{stentStudyResultsDF}. Os resultador foram marcados com ``infarto'' ou ``nenhum evento'', representando que o paciente nao teve infarto até o final da pesquisa.
 
 \begin{table}[h]
@@ -117,13 +117,13 @@ In practice, it is especially important to ask clarifying questions to ensure im
 \centering
 \begin{tabular}{cc ccc c}
   \hline
- & \var{spam} & \var{num\_\hspace{0.3mm}char} & \var{line\_\hspace{0.3mm}breaks} & \var{format} & \var{number} \\ 
+ & \var{spam} & \var{num\_\hspace{0.3mm}char} & \var{line\_\hspace{0.3mm}breaks} & \var{format} & \var{number} \\
   \hline
-1 & no & 21,705 & 551 & html & small \\ 
-  2 & no & 7,011 & 183 & html & big \\ 
-  3 & yes & 631 & 28 & text & none \\ 
+1 & no & 21,705 & 551 & html & small \\
+  2 & no & 7,011 & 183 & html & big \\
+  3 & yes & 631 & 28 & text & none \\
 $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
-  50 & no & 15,829 & 242 & html & small \\ 
+  50 & no & 15,829 & 242 & html & small \\
    \hline
 \end{tabular}
 \caption{Four rows from the \data{email50} data matrix.}
@@ -173,13 +173,13 @@ We consider a publicly available data set that summarizes information about the 
    \var{income} & \var{med\_\hspace{0.3mm}income} & \var{smoking\_\hspace{0.3mm}ban} \\
 \hline
   1 & Autauga & AL & 43671 & 54571 & 6.068 & 10.6 & 77.5 & 7.2 & 24568 & 53255 & none \\
-  2 & Baldwin & AL & 140415 & 182265 & 6.140 & 12.2 & 76.7 & 22.6 & 26469 & 50147 & none \\ 
-  3 & Barbour & AL & 29038 & 27457 & 8.752 & 25.0 & 68.0 & 11.1 & 15875 & 33219 & none \\ 
-  4 & Bibb & AL & 20826 & 22915 & 7.122 & 12.6 & 82.9 & 6.6 & 19918 & 41770 & none \\ 
-  5 & Blount & AL & 51024 & 57322 & 5.131 & 13.4 & 82.0 & 3.7 & 21070 & 45549 & none \\ 
+  2 & Baldwin & AL & 140415 & 182265 & 6.140 & 12.2 & 76.7 & 22.6 & 26469 & 50147 & none \\
+  3 & Barbour & AL & 29038 & 27457 & 8.752 & 25.0 & 68.0 & 11.1 & 15875 & 33219 & none \\
+  4 & Bibb & AL & 20826 & 22915 & 7.122 & 12.6 & 82.9 & 6.6 & 19918 & 41770 & none \\
+  5 & Blount & AL & 51024 & 57322 & 5.131 & 13.4 & 82.0 & 3.7 & 21070 & 45549 & none \\
   $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
-  3142 & Washakie & WY & 8289 & 8533 & 8.714 & 5.6 & 70.9 & 10.0 & 28557 & 48379 & none \\ 
-  3143 & Weston & WY & 6644 & 7208 & 6.695 & 7.9 & 77.9 & 6.5 & 28463 & 53853 & none \\ 
+  3142 & Washakie & WY & 8289 & 8533 & 8.714 & 5.6 & 70.9 & 10.0 & 28557 & 48379 & none \\
+  3143 & Weston & WY & 6644 & 7208 & 6.695 & 7.9 & 77.9 & 6.5 & 28463 & 53853 & none \\
 \hline
 \end{tabular}
 \caption{Seven rows from the \data{county} data set.}
@@ -407,7 +407,7 @@ We can easily access ratings for products, sellers, and companies through websit
 
 Consider the following question from page~\pageref{fedSpendingPovertyQuestion} for the \data{county} data set:
 \begin{enumerate}
-\item[(1)] 
+\item[(1)]
 	Is federal spending, on average, higher or lower in counties with high rates of poverty?
 \end{enumerate}
 If we suspect poverty might affect spending in a county, then poverty is the \term{explanatory} variable and federal spending is the \term{response} variable in the relationship.\footnote{Sometimes the explanatory variable is called the \term{independent} variable and the response variable is called the \term{dependent} variable. However, this becomes confusing since a \emph{pair} of variables might be independent or dependent, so we avoid this language.} If there are many variables, it may be possible to consider a number of them as explanatory variables.
@@ -423,7 +423,7 @@ To identify the explanatory variable in a pair of variables, identify which of t
 
 In some cases, there is no explanatory or response variable. Consider the following question from page~\pageref{ownershipMultiUnitQuestion}:
 \begin{enumerate}
-\item[(2)] 
+\item[(2)]
 	If homeownership is lower than the national average in one county, will the percent of multi-unit structures in that county likely be above or below the national average?
 \end{enumerate}
 It is difficult to decide which of these variables should be considered the explanatory and response variable, i.e. the direction is ambiguous, so no explanatory or response labels are suggested here.
@@ -881,7 +881,7 @@ How are the \indexthis{sample statistics}{sample statistic} of the \data{num\_\h
 \begin{tabular}{l c cc c cc}
   \hline
 & \hspace{0mm} & \multicolumn{2}{c}{\bf robust} & \hspace{2mm} & \multicolumn{2}{c}{\bf not robust} \\
-scenario && median & IQR && $\bar{x}$ & $s$ \\ 
+scenario && median & IQR && $\bar{x}$ & $s$ \\
   \hline
 original \var{num\_\hspace{0.3mm}char} data 	&& 6,890 & 12,875 && 11,600 & 13,130 \\
 % library(openintro); data(email50); d <- email50$num_char; median(d); diff(quantile(d, c(0.25,0.75))); mean(d); sd(d)
@@ -1015,11 +1015,11 @@ A table for a single variable is called a \term{frequency table}. Table~\ref{ema
 \begin{tabular}{ll  ccc  rr}
 & & \multicolumn{3}{c}{\bf \var{number}} & \\
   \cline{3-5}
-& & none & small & big & Total & \hspace{2mm}\  \\ 
+& & none & small & big & Total & \hspace{2mm}\  \\
   \cline{2-6}
-	 & spam &  149 & 168 &  50 & 367 \\ 
-\raisebox{1.5ex}[0pt]{\var{spam}} 
-	& not spam &  400 & 2659 & 495 & 3554 \\ 
+	 & spam &  149 & 168 &  50 & 367 \\
+\raisebox{1.5ex}[0pt]{\var{spam}}
+	& not spam &  400 & 2659 & 495 & 3554 \\
   \cline{2-6}
 & Total & 549 & 2827 & 545 & 3921 \\
   \cline{2-6}
@@ -1033,7 +1033,7 @@ A table for a single variable is called a \term{frequency table}. Table~\ref{ema
 \centering
 \begin{tabular}{cccc}
   \hline
-none & small & big & Total \\ 
+none & small & big & Total \\
  % \hline
  549 & 2827 & 545 & 3921 \\
    \hline
@@ -1061,12 +1061,12 @@ Table~\ref{rowPropSpamNumber} shows the row proportions for Table~\ref{emailSpam
 \centering
 \begin{tabular}{l rrr r}
   \hline
- & none & small & big & Total \\ 
+ & none & small & big & Total \\
   \hline
 spam &  $149/367 = 0.406$ & $168/367 = 0.458$ &
-			$50/367 = 0.136$ & 1.000 \\ 
+			$50/367 = 0.136$ & 1.000 \\
 not spam &  $400/3554 = 0.113$ & $2657/3554 = 0.748$ &
-			$495/3554 = 0.139$ & 1.000 \\ 
+			$495/3554 = 0.139$ & 1.000 \\
    \hline
 Total & $549/3921 = 0.140$ & $2827/3921 = 0.721$ &
 			$545/3921 = 0.139$ & 1.000 \\
@@ -1083,12 +1083,12 @@ A contingency table of the column proportions is computed in a similar way, wher
 \centering\small
 \begin{tabular}{l rrr r}
   \hline
- & none & small & big & Total \\ 
+ & none & small & big & Total \\
   \hline
 spam &  $149/549 = 0.271$ & $168/2827 = 0.059$ &
-				$50/545 = 0.092$ & $367/3921 = 0.094$ \\ 
+				$50/545 = 0.092$ & $367/3921 = 0.094$ \\
 not spam &  $400/549 = 0.729$ & $2659/2827 = 0.941$ &
-				$495/545 = 0.908$ & $3684/3921 = 0.906$ \\ 
+				$495/545 = 0.908$ & $3684/3921 = 0.906$ \\
    \hline
 Total & 1.000 & 1.000 & 1.000 & 1.000 \\
    \hline
@@ -1118,10 +1118,10 @@ If we generate the column proportions, we can see that a higher fraction of plai
 \centering
 \begin{tabular}{l cc r}
   \hline
- & text & HTML & Total \\ 
+ & text & HTML & Total \\
   \hline
-spam & 209 & 158 & 367 \\ 
-not spam & 986 & 2568 & 3554 \\ 
+spam & 209 & 158 & 367 \\
+not spam & 986 & 2568 & 3554 \\
    \hline
 Total & 1195 & 2726 & 3921 \\
    \hline
@@ -1192,7 +1192,7 @@ A \term{mosaic plot} is a graphical display of contingency table information tha
    \label{emailSpamNumberMosaicRev}
 \end{figure}
 
-This one-variable mosaic plot is further divided into pieces in Figure~\ref{emailSpamNumberMosaic} using the \var{spam} variable. Each column is split proportionally according to the fraction of emails that were spam in each number category. For example, the second column, representing emails with only small numbers, was divided into emails that were spam (lower) and not spam (upper). 
+This one-variable mosaic plot is further divided into pieces in Figure~\ref{emailSpamNumberMosaic} using the \var{spam} variable. Each column is split proportionally according to the fraction of emails that were spam in each number category. For example, the second column, representing emails with only small numbers, was divided into emails that were spam (lower) and not spam (upper).
 As another example, the bottom of the third column represents spam emails that had big numbers, and the upper part of the third column represents regular emails that had big numbers. We can again use this plot to see that the \var{spam} and \var{number} variables are associated since some columns are divided in different vertical locations than others, which was the same technique used for checking an association in the standardized version of the segmented bar plot.
 
 In a similar way, a mosaic plot representing row proportions of Table~\ref{emailSpamNumberTableTotals} could be constructed, as shown in Figure~\ref{emailSpamNumberMosaicRev}. However, because it is more insightful for this application to consider the fraction of spam in each category of the \var{number} variable, we prefer Figure~\ref{emailSpamNumberMosaic}.
@@ -1224,7 +1224,7 @@ There were 2,041 counties where the population increased from 2000 to 2010, and 
 \begin{table}
 \centering
 \begin{tabular}{ ccc ccc c ccc }
-\multicolumn{6}{c}{\bf population gain} && \multicolumn{3}{c}{\bf no gain} \\ 
+\multicolumn{6}{c}{\bf population gain} && \multicolumn{3}{c}{\bf no gain} \\
   \cline{1-6} \cline{8-10}
 41.2 & 33.1 & 30.4 & 37.3 & 79.1 & 34.5 &\hspace{5mm}\ & 40.3 & 33.5 & 34.8 \\
 22.9 & 39.9 & 31.4 & 45.1 & 50.6 & 59.4 && 29.5 & 31.8 & 41.3 \\
@@ -1303,10 +1303,10 @@ For each supervisor we record the gender associated with the assigned file and t
 \begin{tabular}{l l cc rr}
 & & \multicolumn{2}{c}{\var{decision}} \\
   \cline{3-4}
-		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\ 
+		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\
   \cline{2-5}
-		&	{male} 			& 21    		& 3   & 24  	 \\ 
-  \raisebox{1.5ex}[0pt]{\var{gender}}		&	{female} 	& 14    		& 10     & 24	 \\ 
+		&	{male} 			& 21    		& 3   & 24  	 \\
+  \raisebox{1.5ex}[0pt]{\var{gender}}		&	{female} 	& 14    		& 10     & 24	 \\
   \cline{2-5}
   		&	Total		& 35	& 13	&  48 \\
   \cline{2-5}
@@ -1344,10 +1344,10 @@ In this \term{simulation}, we thoroughly shuffle 48 personnel files, 24 labeled 
 \begin{tabular}{l l cc rr}
 & & \multicolumn{2}{c}{\var{decision}} \\
   \cline{3-4}
-		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\ 
+		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\
   \cline{2-5}
-		&	\resp{male\_\hspace{0.3mm}sim} 					& 18    		& 6    & 24 	 \\ 
-  \raisebox{1.5ex}[0pt]{\var{gender\_\hspace{0.3mm}sim}}		&	\resp{female\_\hspace{0.3mm}sim} 	& 17    		& 7 & 24    	 \\ 
+		&	\resp{male\_\hspace{0.3mm}sim} 					& 18    		& 6    & 24 	 \\
+  \raisebox{1.5ex}[0pt]{\var{gender\_\hspace{0.3mm}sim}}		&	\resp{female\_\hspace{0.3mm}sim} 	& 17    		& 7 & 24    	 \\
   \cline{2-5}
   & Total	& 35 & 13 & 48
 \end{tabular}
@@ -1392,3 +1392,5 @@ Based on the simulations, we have two options. (1)~We conclude that the study re
 \index{data!discrimination|)}
 
 One field of statistics, statistical inference, is built on evaluating whether such differences are due to chance. In statistical inference, statisticians evaluate which model is most reasonable given the data. Errors do occur, just like rare events, and we might choose the wrong model. While we do not always choose correctly, statistical inference gives us tools to control and evaluate how often these errors occur. In Chapter~\ref{foundationsForInference}, we give a formal introduction to the problem of model selection. We spend the next two chapters building a foundation of probability and theory necessary to make that discussion rigorous.
+
+% ex:filetype=tex

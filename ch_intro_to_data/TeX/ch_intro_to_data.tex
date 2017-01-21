@@ -35,7 +35,7 @@ Os pesquisadores tem feito esta pergunta com relação a 451 pacientes com risco
 \item[]\termsub{Grupo de tratamento}{grupo de tratamenteo group}. Paciente neste grupo recebem um stent e medicação. A medicação tem efeito terapeutico, mudanças nos fatores de rico e ajuda na mudança do estilo de vidan.
 \item[]\termsub{Grupo de controle}{grupo de controle}. Paciente no grupo de controle recebem o mesmo medicamento do primeiro grupo, mas não recebem o stents.
 \end{itemize}
-Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de refenência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento. 
+Os pesquisadores aleatoriamente incluem 224 pacientes para o grupo de tratamento e 227 pacientes para o grupo de controle. Neste estudo, o grupo de control provê o ponto de refenência com o qual mensuramos o impácto do tratamento com stents no grupo de tratamento.
 Os pesquisadores estudaram os efeitos do stents em dois pontos: 30~dias após o início do experimento e 365~dias passados. Os resultados de 5 paciente estão resumidos na tabela Table~\ref{stentStudyResultsDF}. Os resultados foram marcados com ``infarto'' ou ``nenhum evento'', representando que o paciente nao teve infarto até o final da pesquisa.
 
 \begin{table}[h]
@@ -112,18 +112,18 @@ Table~\ref{email50DF} mostra colunas 1, 2, 3, e 50 do conjunto de dados relativo
 
 Cada linha na tabela representa um único email ou \term{caso}.\footnote{Um caso pode ser chamado também \term{unidade de observação} ou uma \term{unidade observacional}.} As colunas representam características, chamadas \termsub{variables}{variable}, para cada um dos emails. Por exemplo, a primeira linha representa email 1, o qual não é spam, contém 21, 705 caracteres, 551 quebras de linha, está escrito em no formato HTML, e contém apenas números pequenos.
 
-Na prática, é especialmente importante perguntar e deixar claro questões importante sobre os aspéctos dos dados a serem esntendidos. De agora em diante, será sempre importante estarmos certo do que cada variável significa e as unidade em que foram medidas. Descrições de todas as cinco variáveis dos emails dadas na tabela Table~\ref{email50Variables}. 
+Na prática, é especialmente importante perguntar e deixar claro questões importante sobre os aspéctos dos dados a serem esntendidos. De agora em diante, será sempre importante estarmos certo do que cada variável significa e as unidade em que foram medidas. Descrições de todas as cinco variáveis dos emails dadas na tabela Table~\ref{email50Variables}.
 \begin{table}[t]
 \centering
 \begin{tabular}{cc ccc c}
   \hline
- & \var{spam} & \var{num\_\hspace{0.3mm}carac} & \var{quebra\_\hspace{0.3mm}linha} & \var{formato} & \var{número} \\ 
+ & \var{spam} & \var{num\_\hspace{0.3mm}carac} & \var{quebra\_\hspace{0.3mm}linha} & \var{formato} & \var{número} \\
   \hline
-1 & não & 21,705 & 551 & html & pequeno \\ 
-  2 & não & 7,011 & 183 & html & grande \\ 
-  3 & sim & 631 & 28 & text & none \\ 
+1 & não & 21,705 & 551 & html & pequeno \\
+  2 & não & 7,011 & 183 & html & grande \\
+  3 & sim & 631 & 28 & text & none \\
 $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
-  50 & não & 15,829 & 242 & html & pequeno \\ 
+  50 & não & 15,829 & 242 & html & pequeno \\
    \hline
 \end{tabular}
 \caption{Quatro linhas de \data{email50} matriz de dados.}
@@ -151,7 +151,7 @@ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
 
 \index{data!email50|)}
 
-Os dados na tabela Table~\ref{email50DF} reprensenta um term{matriz de dados}, o qual é um jeito comum de organizar os dados. Cada linha da matriz de dados corresponde a únic caso, e cada coluna corresponde a uma variável. Uma matriz de dados para o estudo sobre infartos mostrado na Section~\ref{basicExampleOfStentsAndStrokes} é mostrado na Table~\vref{stentStudyResultsDF}, onde os caso foram paciente e tínhamos três variáveis registrado para cada paciente. 
+Os dados na tabela Table~\ref{email50DF} reprensenta um term{matriz de dados}, o qual é um jeito comum de organizar os dados. Cada linha da matriz de dados corresponde a únic caso, e cada coluna corresponde a uma variável. Uma matriz de dados para o estudo sobre infartos mostrado na Section~\ref{basicExampleOfStentsAndStrokes} é mostrado na Table~\vref{stentStudyResultsDF}, onde os caso foram paciente e tínhamos três variáveis registrado para cada paciente.
 
 Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, ou caso é adicionado ao conjunto de dados, uma adicional linha pode ser facilmente adicionada. Similarmente, outra coluna pode ser adicionada para uma nova variável.
 
@@ -173,13 +173,13 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
    \var{renda} & \var{renda\_\hspace{0.3mm}média} & \var{poluíção\_disp\hspace{0.3mm}} \\
 \hline
   1 & Autauga & AL & 43671 & 54571 & 6.068 & 10.6 & 77.5 & 7.2 & 24568 & 53255 & não \\
-  2 & Baldwin & AL & 140415 & 182265 & 6.140 & 12.2 & 76.7 & 22.6 & 26469 & 50147 & não \\ 
-  3 & Barbour & AL & 29038 & 27457 & 8.752 & 25.0 & 68.0 & 11.1 & 15875 & 33219 & não \\ 
-  4 & Bibb & AL & 20826 & 22915 & 7.122 & 12.6 & 82.9 & 6.6 & 19918 & 41770 & não \\ 
-  5 & Blount & AL & 51024 & 57322 & 5.131 & 13.4 & 82.0 & 3.7 & 21070 & 45549 & não \\ 
+  2 & Baldwin & AL & 140415 & 182265 & 6.140 & 12.2 & 76.7 & 22.6 & 26469 & 50147 & não \\
+  3 & Barbour & AL & 29038 & 27457 & 8.752 & 25.0 & 68.0 & 11.1 & 15875 & 33219 & não \\
+  4 & Bibb & AL & 20826 & 22915 & 7.122 & 12.6 & 82.9 & 6.6 & 19918 & 41770 & não \\
+  5 & Blount & AL & 51024 & 57322 & 5.131 & 13.4 & 82.0 & 3.7 & 21070 & 45549 & não \\
   $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
-  3142 & Washakie & WY & 8289 & 8533 & 8.714 & 5.6 & 70.9 & 10.0 & 28557 & 48379 & não \\ 
-  3143 & Weston & WY & 6644 & 7208 & 6.695 & 7.9 & 77.9 & 6.5 & 28463 & 53853 & não \\ 
+  3142 & Washakie & WY & 8289 & 8533 & 8.714 & 5.6 & 70.9 & 10.0 & 28557 & 48379 & não \\
+  3143 & Weston & WY & 6644 & 7208 & 6.695 & 7.9 & 77.9 & 6.5 & 28463 & 53853 & não \\
 \hline
 \end{tabular}
 \caption{Sete linhas do \data{county} conjunto de dados.}
@@ -219,11 +219,11 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \subsection{Tipos de variáveis}
 \label{variableTypes}
 
-Examine o \var{gasto\_\hspace{0.3mm}federal}, \var{pop2010}, \var{estado}, and \var{disp\_\hspace{0.3mm}poluíção} variáveis no \data{county} conjunto de dados. Cada uma das variáveis é hierarquicamente diferente das outras com carcterísticas singulares. 
+Examine o \var{gasto\_\hspace{0.3mm}federal}, \var{pop2010}, \var{estado}, and \var{disp\_\hspace{0.3mm}poluíção} variáveis no \data{county} conjunto de dados. Cada uma das variáveis é hierarquicamente diferente das outras com carcterísticas singulares.
 
 Primeiro consideramos \var{gasto\_\hspace{0.3mm}federal}, o qual foi dito ser variável \term{numérica} desde que isto pode ser uma longa faixa de valores, e isto é importante ser adicionado, subtraído, ou ter as médias deste valores. De outra forma, nós poderíamos classifica uma variável código de área telefonica como numérica, e a média, soma, diferença não ter significado claro algum.
 
-A variável \var{pop2010} também é numerica, apesar de parecer um pouco diferente de \var{gasto\_\hspace{0.3mm}federal}. Esta variável que conta a população apenas pode assumir valores não negativos (\resp{0}, \resp{1}, resp{2}, ...). Por esta razão, a variável da população é dita \term{discreta} desde que isto pode ser unicamente numera, e valores com saltos. De outra maneira, o gasto federal percápito é dita uma variável contínua 
+A variável \var{pop2010} também é numerica, apesar de parecer um pouco diferente de \var{gasto\_\hspace{0.3mm}federal}. Esta variável que conta a população apenas pode assumir valores não negativos (\resp{0}, \resp{1}, resp{2}, ...). Por esta razão, a variável da população é dita \term{discreta} desde que isto pode ser unicamente numera, e valores com saltos. De outra maneira, o gasto federal percápito é dita uma variável contínua
 
 As variáveis \var{state} pode assumir até 51 valores como, alem de Washington, DC:  \resp{AL}, ..., and \resp{WY}. Respondem como categorias, \var{state} então é chamada variável categorica, e possíveis valores são chamados nível das variáveis.
 
@@ -234,7 +234,7 @@ As variáveis \var{state} pode assumir até 51 valores como, alem de Washington,
 \label{variables}
 \end{figure}
 
-Finalmente, considere a variável \var{smoking\_\hspace{0.3mm}ban}, a qual descreve o tipo de county-wide somokin band e guarda valores \resp{none}, \resp{parcia}, ou \resp{comprehensive} em cada município. Esta variável parece ser híbrida: é categórica mas os níveis tem uma ordenação natural. Uma variável como esta propriedade é chamada \term{ordinal}, enquanto uma regular variavel categorica sem este tipo especial é conhecida \term{nominal}. Para simplificar as análises, qualquer variável neste livro será tratada como variáveis categóricas. 
+Finalmente, considere a variável \var{smoking\_\hspace{0.3mm}ban}, a qual descreve o tipo de county-wide somokin band e guarda valores \resp{none}, \resp{parcia}, ou \resp{comprehensive} em cada município. Esta variável parece ser híbrida: é categórica mas os níveis tem uma ordenação natural. Uma variável como esta propriedade é chamada \term{ordinal}, enquanto uma regular variavel categorica sem este tipo especial é conhecida \term{nominal}. Para simplificar as análises, qualquer variável neste livro será tratada como variáveis categóricas.
 
 \begin{example}{Dados onde são coletados estatísticas sobre os estudantes do curso. Três variáveis contém os seguintes itens: número de irmãos, altura, se o estudante já teve seus dados previamente verificados. Classifica cada uma das variáveis como numérica, discreta numérica ou categórica.}
 O número de irmãos e altura do estudante são representados por variáveis numéricas. O número de siblings é um contador discreto, as variáveis de altura são contínuas, então numérica contínua, e a útlima variável classfica os estudantes em duas categorias os que já tiveram e os quem não tiveram suas estatíticas auferidas, portanto uma variável categórica.
@@ -256,8 +256,8 @@ Muitas análises são motivadas pela procura de relacionamentos entre duas ou ma
 \end{enumerate}
 
 Para responder estas questões, os dados devem ser coletados, tais como \data{county} conjunto de dados mostrando no Table~\ref{countyDF}. Examinando resumo de estatíticas  \data{summary statistics} poderia fornecer alguma ideia sobre cada uma das três questões sobre municípios. Adicionalmente, gráficos podem ser usados para a visualização dos dados que são sumarizados e também úteis para responder as questões.
- 
-\indexthis{Scatterplots}{scatterplot} são um dos tipos de gráficos usados para estudar o relacionamento entre duas variáveis. Figure~\ref{county_fed_spendVsPoverty} compara as variáveis \var{fed\_\hspace{0.3mm}spend} e \var{poverty}. Cada ponto plotado representa um único município. Neste caso, os pontos destacados correspondem a County~1088 in o \data{county} conjunto de dados: Owsley County, Kentucky, o qual tem a pobreza a uma taxa de 41.5\% e um gasto federal de \$21.50 per capita. O scatterplot sugere um relacionamento entre duas variáveis: municípios com alta taxa de pobreza que também tem levemente uma tendência de maior gasto federal. Nós podemos pensar como e porque este relacionamento existe e investigar cada ideia para determinar qual é a explicação mais razoavel. 
+
+\indexthis{Scatterplots}{scatterplot} são um dos tipos de gráficos usados para estudar o relacionamento entre duas variáveis. Figure~\ref{county_fed_spendVsPoverty} compara as variáveis \var{fed\_\hspace{0.3mm}spend} e \var{poverty}. Cada ponto plotado representa um único município. Neste caso, os pontos destacados correspondem a County~1088 in o \data{county} conjunto de dados: Owsley County, Kentucky, o qual tem a pobreza a uma taxa de 41.5\% e um gasto federal de \$21.50 per capita. O scatterplot sugere um relacionamento entre duas variáveis: municípios com alta taxa de pobreza que também tem levemente uma tendência de maior gasto federal. Nós podemos pensar como e porque este relacionamento existe e investigar cada ideia para determinar qual é a explicação mais razoavel.
 
 \begin{figure}
 \centering
@@ -273,7 +273,7 @@ Examine as variáveis no \data{email50} conjunto de dados, as quais estão descr
 O \var{fed\_\hspace{0.3mm}spend} e \var{poverty} variáveis são ditos associados por que o gráfco mostra um padrão distinto. Quando duas variáveis mostra alguma conexão com outra, são chamadas variáveis \term{associdas}. Variáveis associadas podem também serem chamados variáveis \term{dependentes} e vice-versa.
 
 \begin{example}{Este exemplo examina o relacionamento entre propriétarios de casas e a porcentagem de estruturas de unidades múltiplas (ex. apartamentos, condomínios), o qual visualizando usando o scatterplot em Figure~\ref{multiunitsVsOwnership}. Há variáveis associadas ?}
-Isto mostra que na maior fração de unidades em estruturas de unidades múltiplas, o baixo taxa de proprietários de moradia própria. Desde que haja um relacionamento entre as variáveis, elas são ditas associadas. 
+Isto mostra que na maior fração de unidades em estruturas de unidades múltiplas, o baixo taxa de proprietários de moradia própria. Desde que haja um relacionamento entre as variáveis, elas são ditas associadas.
 \end{example}
 
 \begin{figure}
@@ -288,7 +288,7 @@ Por que existe uma tenendência descendente em Figure~\ref{multiunitsVsOwnership
 se duas variáveis são não associadas, entam elas podem ser ditas \term{independentes}. Isto por que, duas variáveis são independentes se não evidência de relacionamenteo entre elas.
 
 \begin{termBox}{\tBoxTitle{Associated or independent, not both}
-A pair of variables are either related in some way (associated) or not (independent). No pair of variables is both associated and independent.}
+ A pair of variables are either related in some way (associated) or not (independent). No pair of variables is both associated and independent.}
 \end{termBox}
 
 \index{data!county|)}
@@ -404,7 +404,7 @@ We can easily access ratings for products, sellers, and companies through websit
 
 Consider the following question from page~\pageref{fedSpendingPovertyQuestion} for the \data{county} data set:
 \begin{enumerate}
-\item[(1)] 
+\item[(1)]
 	Is federal spending, on average, higher or lower in counties with high rates of poverty?
 \end{enumerate}
 If we suspect poverty might affect spending in a county, then poverty is the \term{explanatory} variable and federal spending is the \term{response} variable in the relationship.\footnote{Sometimes the explanatory variable is called the \term{independent} variable and the response variable is called the \term{dependent} variable. However, this becomes confusing since a \emph{pair} of variables might be independent or dependent, so we avoid this language.} If there are many variables, it may be possible to consider a number of them as explanatory variables.
@@ -420,7 +420,7 @@ To identify the explanatory variable in a pair of variables, identify which of t
 
 In some cases, there is no explanatory or response variable. Consider the following question from page~\pageref{ownershipMultiUnitQuestion}:
 \begin{enumerate}
-\item[(2)] 
+\item[(2)]
 	If homeownership is lower than the national average in one county, will the percent of multi-unit structures in that county likely be above or below the national average?
 \end{enumerate}
 It is difficult to decide which of these variables should be considered the explanatory and response variable, i.e. the direction is ambiguous, so no explanatory or response labels are suggested here.
@@ -514,49 +514,99 @@ A simple random sample would likely draw individuals from all 30 villages, which
 
 
 %%%%%
-\section[Experiments]{Experiments \sectionvideohref{youtube-g7JGe_ykB3I&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
+\section[Experimentos]{Experimentos \sectionvideohref{youtube-g7JGe_ykB3I&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{experimentsSection}
 
-Studies where the researchers assign treatments to cases are called \termsub{experiments}{experiment}. When this assignment includes randomization, e.g.~using a coin flip to decide which treatment a patient receives, it is called a \term{randomized experiment}. Randomized experiments are fundamentally important when trying to show a causal connection between two variables.
+Estudos em que os pesquisadores atribuem tratamentos a casos chamam-se \termsub{experimentos}{experimento}.
+Quando esta atribuição inclui randomização, por exemplo tirando cara ou coroa para decidir a qual tratamento um paciente recebe, ela chama-se \term{experimento randomizado}.
+Experimentos randomizados são importantíssimos para provar uma ligação causal entre duas variáveis.
 
 \subsection{Principles of experimental design}
 \label{experimentalDesignPrinciples}
 
-Randomized experiments are generally built on four principles.
+Experimentos randomizados baseiam-se geralmente em quatro princípios.
 \begin{description}
-\item[Controlling.] Researchers assign treatments to cases, and they do their best to \term{control} any other differences in the groups. For example, when patients take a drug in pill form, some patients take the pill with only a sip of water while others may have it with an entire glass of water. To control for the effect of water consumption, a doctor may ask all patients to drink a 12 ounce glass of water with the pill.
-\item[Randomization.] Researchers randomize patients into treatment groups to account for variables that cannot be controlled. For example, some patients may be more susceptible to a disease than others due to their dietary habits. Randomizing patients into the treatment or control group helps even out such differences, and it also prevents accidental bias from entering the study.
-\item[Replication.] The more cases researchers observe, the more accurately they can estimate the effect of the explanatory variable on the response. In a single study, we \term{replicate} by collecting a sufficiently large sample. Additionally, a group of scientists may replicate an entire study to verify an earlier finding.
+ \item[Contrôle.]
+  Pesquisadores atribuem tratamentos a casos, e eles tentam o melhor de \term{controlar} todas as outras diferenças nos grupos.
+  Por exemplo, quando pacientes tomam uma droga em forma de uma pílula, uns pacientes tomam a pílula com apenas um gole de água, enquanto outros com um copo inteiro de água.
+  Para controlar o efeito de consumo de água, o doutor pode pedir a todos os pacientes de beber um copo de água de 12 onça com a pílula.
+ \item[Randomização.]
+  Pesquisadores randomizam pacientes em grupos de tratamento para tomar conta de variáveis que não podem ser controladas.
+  Por exemplo, uns pacientes podem ser mais suscetíveis a uma doença que outros devido a sua rotina dietária.
+  Randomizando pacientes em grupos de tratamento ajuda nivelar tais diferenças, e também previne bias acidental de entrar no estudo.
+ \item[Replicação.]
+  Quanto mais casos pesquisadores observam, quanto mais exatamente podem estimar o efeito da variável explanatória na resposta.
+  Em um único estudo, \term{replicamos} coletando uma amostra suficientemente grande.
+  Adicionalmente, um grupo de científicos pode replicar um estudo inteiro para verificar um resultado anterior.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.78\textwidth]{ch_intro_to_data/figures/figureShowingBlocking/figureShowingBlocking}
-\caption{Blocking using a variable depicting patient risk. Patients are first divided into low-risk and high-risk blocks, then each block is evenly separated into the treatment groups using randomization. This strategy ensures an equal representation of patients in each treatment group from both the low-risk and high-risk categories.}
+\caption{Agrupamento em blocos usando uma variável descrevendo o risco de paciente.
+ Pacientes são primeiramente divididos entre blocos de baixo e alto risco, em seguida, usando randomização, cada bloco é uniformemente separado nos grupos de tratamento.
+ Esta estratégia assegura uma representação uniforme de pacientes em cada grupo de tratamento das duas categorias, de alto e de baixo risco.
 \label{figureShowingBlocking}
 \end{figure}
 
-\item[Blocking.] Researchers sometimes know or suspect that variables, other than the treatment, influence the response. Under these circumstances, they may first group individuals based on this variable into \term{blocks} and then randomize cases within each block to the treatment groups. This strategy is often referred to as \term{blocking}. For instance, if we are looking at the effect of a drug on heart attacks, we might first split patients in the study into low-risk and high-risk blocks, then randomly assign half the patients from each block to the control group and the other half to the treatment group, as shown in Figure~\ref{figureShowingBlocking}. This strategy ensures each treatment group has an equal number of low-risk and high-risk patients.
-\end{description}
+\item[Agrupamento em blocos.]
+ Pesquisadores de vez em quando sabem ou supõem que variáveis, a não ser o tratamento, influenciam a resposta.
+ Nestas circunstâncias, podem primeiramente agrupar indivíduos, baseado nesta variável, em \term{blocos} e depois randomizar casos em cada bloco dos grupos de tratamento.
+ Esta estratégia referencia-se com frequência como \term{blocking} (agrupamento em blocos).
+ Por exemplo, se estamos olhando o efeito de uma droga nos infartos, poderíamos primeiro separar pacientes no estudo em pacientes de alto e de baixo risco, em seguida aleatoriamente lotear uma metade dos pacientes de cada grupo no grupo de controle e a outra metade no grupo de tratamento, como mostrado em Figura~\ref{figureShowingBlocking}.
+ Esta estratégia garante que cada grupo de tratamento tem um número igual de pacientes de alto e baixo risco.
 
-It is important to incorporate the first three experimental design principles into any study, and this book describes applicable methods for analyzing data from such experiments. Blocking is a slightly more advanced technique, and statistical methods in this book may be extended to analyze data collected using blocking.
+ É importante incorporar os primeiro três princípios de projeto em qualquer estudo, e este livro descreve métodos aplicáveis para analisar dados de tais experimentos.
+ Blocking é uma técnica levemente mais avançada, e métodos estatísticos neste livro podem ser estendidos para analisar dados coletados usando blocking.
 
-\subsection{Reducing bias in human experiments}
+\subsection{Reduzindo bias em experimentos humanos}
 \label{biasInHumanExperiments}
 
-Randomized experiments are the gold standard for data collection, but they do not ensure an unbiased perspective into the cause and effect relationships in all cases. Human studies are perfect examples where bias can unintentionally arise. Here we reconsider a study where a new drug was used to treat heart attack patients.\footnote{Anturane Reinfarction Trial Research Group. 1980. Sulfinpyrazone in the prevention of sudden death after myocardial infarction. New England Journal of Medicine 302(5):250-256.} In particular, researchers wanted to know if the drug reduced deaths in patients.
+Experimentos randomizados são o alto padrão para coletas de dados, contudo não garantem uma perspectiva isenta para as relações entre causa e efeito em todos os casos.
+Estudos humanos servem com exemplo perfeito em que bias pode surgir involuntariamente.
+Aqui consideramos um estudo em que uma nova droga foi usada para tratar pacientes de infarto.
+\footnote{Anturane Reinfarction Trial Research Group. 1980. Sulfinpyrazone in the prevention of sudden death after myocardial infarction.
+New England Journal of Medicine 302(5):250-256.}
+Em particular, pesquisadores quiseram saber se a droga diminuiu a mortalidade entre os pacientes.
 
-These researchers designed a randomized experiment because they wanted to draw causal conclusions about the drug's effect. Study volunteers\footnote{Human subjects are often called \term{patients}, \term{volunteers}, or \term{study participants}.} were randomly placed into two study groups. One group, the \term{treatment group}, received the drug. The other group, called the \term{control group}, did not receive any drug treatment.
+Estes pesquisadores projetaram um experimento randomizado porque quiseram tirar conclusões sobre o efeito da droga.
+Voluntários foram aleatoriamente loteados em dois grupos.
+\footnote{Seres humanos são frequentemente referidos como \term{patientes}, \term{voluntários}, ou \term{participantes}.}
+Um grupo, o \term{grupo de tratamento}, recebeu a droga.
+O outro grupo, chamado o \term{grupo de controle}, recebeu nenhuma droga.
 
-Put yourself in the place of a person in the study. If you are in the treatment group, you are given a fancy new drug that you anticipate will help you. On the other hand, a person in the other group doesn't receive the drug and sits idly, hoping her participation doesn't increase her risk of death. These perspectives suggest there are actually two effects: the one of interest is the effectiveness of the drug, and the second is an emotional effect that is difficult to quantify.
+Imagine-te em lugar de uma dessas pessoas no estudo.
+Por um lado, se estás no grupo de tratamento, recebes uma nova droga sofisticada que antecipas a ajudar-lhe.
+Por outro, uma pessoa no outro grupo não recebe a droga e cruza os braços, esperando que a sua participação não aumente a sua mortalidade.
+Estas perspectivas sugerem que há com efeito dois efeitos:
+O do nosso interesse é a efetividade da droga, o segundo é o efeito emocional dificilmente quantificado.
 
-Researchers aren't usually interested in the emotional effect, which might bias the study. To circumvent this problem, researchers do not want patients to know which group they are in. When researchers keep the patients uninformed about their treatment, the study is said to be \term{blind}. But there is one problem: if a patient doesn't receive a treatment, she will know she is in the control group. The solution to this problem is to give fake treatments to patients in the control group. A fake treatment is called a \term{placebo}, and an effective placebo is the key to making a study truly blind. A classic example of a placebo is a sugar pill that is made to look like the actual treatment pill. Often times, a placebo results in a slight but real improvement in patients. This effect has been dubbed the \term{placebo~effect}.
+Pesquisadores usualmente não são interessados no efeito emocional, que pode predispor o estudo.
+Para contornar este problema, pesquisadores não querem os pacientes saberem em qual grupo estão.
+Se pesquisadores mantêm os pacientes desinformados sobre seu tratamento, o estudo é \term{cego}.
+Mas há um problema:
+Se um paciente não recebe o tratamento, ela saberá que está no grupo de controle.
+A solução deste problema é dar um tratamento fingido aos pacientes no grupo de controle.
+Um tratamento fingido chama-se \term{placebo}, e um placebo efetivo é a chave para tornar um estudo verdadeiramente cego.
+Um exemplo clássico de um placebo é uma pílula de açúcar feito para aparecer como a verdadeira pílula de tratamento.
+Muitas vezes, um placebo resulta em um pequeno mas verdadeiro melhoramento dos pacientes.
+Este efeito chama-se o \term{efeito~de~placebo}
 
-The patients are not the only ones who should be blinded: doctors and researchers can accidentally bias a study. When a doctor knows a patient has been given the real treatment, she might inadvertently give that patient more attention or care than a patient that she knows is on the placebo. To guard against this bias, which again has been found to have a measurable effect in some instances, most modern studies employ a \term{double-blind} setup where doctors or researchers who interact with patients are, just like the patients, unaware of who is or is not receiving the treatment.\footnote{There are always some researchers involved in the study who do know which patients are receiving which treatment. However, they do not interact with the study's patients and do not tell the blinded health care professionals who is receiving which treatment.}
+Os pacientes  não são os únicos que podem ser cegados:
+doutores e pesquisadores podem involuntariamente influenciar um estudo:
+Quando um doutor sabe que um paciente recebeu o verdadeiro tratamento, ela pode inadvertidamente prestar mais atenção ou tratamento a esse paciente do que a um paciente de que ela sabe que recebeu o placebo.
+Para guardar contra este bias, que comprovadamente tem um efeito mensurável em uns casos, a maioria dos estudos modernos usam um esquema \term{duplo-cego} em que os doutores ou pesquisadores que interagem com pacientes são desinformados sobre quem recebeu ou não recebeu o tratamento, exatamente como os pacientes.
+\footnote{Sempre existem pesquisadores envolvidos que sabem quais pacientes receberam qual tratamento.
+  Porém, não interagem com os pacientes do estudo, e não informam os profissionais cegados sobre que está recebendo qual tratamento.}
 
 \begin{exercise}
-Look back to the study in Section~\ref{basicExampleOfStentsAndStrokes} where researchers were testing whether stents were effective at reducing strokes in at-risk patients. Is this an experiment? Was the study blinded? Was it double-blinded?\footnote{The researchers assigned the patients into their treatment groups, so this study was an experiment. However, the patients could distinguish what treatment they received, so this study was not blind. The study could not be double-blind since it was not blind.}
+  Revisite o estudo em Seção~\ref{basicExampleOfStentsAndStrokes} em que pesquisadores verificaram se stents reduziram efetivamente infartos em pacientes de alto risco.
+  Isto é um experimento?
+  O estudo foi cego?
+  Foi duplo-cego?
+  \footnote{Os pesquisadores lotaram os pacientes em seus grupos de tratamento, fazendo com que este estudo foi um experimento.
+    Porém, os pacientes podiam distinguir qual tratamento receberam, de forma que o estudo não era cego.
+    Logo, o estudo não podia ser duplo-cego, já que não era cego.}
 \end{exercise}
-
 
 %%%%%
 \section[Examining numerical data]{Examining numerical data \sectionvideohref{youtube-Xm0PPtci3JE&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
@@ -878,7 +928,7 @@ How are the \indexthis{sample statistics}{sample statistic} of the \data{num\_\h
 \begin{tabular}{l c cc c cc}
   \hline
 & \hspace{0mm} & \multicolumn{2}{c}{\bf robust} & \hspace{2mm} & \multicolumn{2}{c}{\bf not robust} \\
-scenario && median & IQR && $\bar{x}$ & $s$ \\ 
+scenario && median & IQR && $\bar{x}$ & $s$ \\
   \hline
 original \var{num\_\hspace{0.3mm}char} data 	&& 6,890 & 12,875 && 11,600 & 13,130 \\
 % library(openintro); data(email50); d <- email50$num_char; median(d); diff(quantile(d, c(0.25,0.75))); mean(d); sd(d)
@@ -1012,11 +1062,11 @@ A table for a single variable is called a \term{frequency table}. Table~\ref{ema
 \begin{tabular}{ll  ccc  rr}
 & & \multicolumn{3}{c}{\bf \var{number}} & \\
   \cline{3-5}
-& & none & small & big & Total & \hspace{2mm}\  \\ 
+& & none & small & big & Total & \hspace{2mm}\  \\
   \cline{2-6}
-	 & spam &  149 & 168 &  50 & 367 \\ 
-\raisebox{1.5ex}[0pt]{\var{spam}} 
-	& not spam &  400 & 2659 & 495 & 3554 \\ 
+	 & spam &  149 & 168 &  50 & 367 \\
+\raisebox{1.5ex}[0pt]{\var{spam}}
+	& not spam &  400 & 2659 & 495 & 3554 \\
   \cline{2-6}
 & Total & 549 & 2827 & 545 & 3921 \\
   \cline{2-6}
@@ -1030,7 +1080,7 @@ A table for a single variable is called a \term{frequency table}. Table~\ref{ema
 \centering
 \begin{tabular}{cccc}
   \hline
-none & small & big & Total \\ 
+none & small & big & Total \\
  % \hline
  549 & 2827 & 545 & 3921 \\
    \hline
@@ -1058,12 +1108,12 @@ Table~\ref{rowPropSpamNumber} shows the row proportions for Table~\ref{emailSpam
 \centering
 \begin{tabular}{l rrr r}
   \hline
- & none & small & big & Total \\ 
+ & none & small & big & Total \\
   \hline
 spam &  $149/367 = 0.406$ & $168/367 = 0.458$ &
-			$50/367 = 0.136$ & 1.000 \\ 
+			$50/367 = 0.136$ & 1.000 \\
 not spam &  $400/3554 = 0.113$ & $2657/3554 = 0.748$ &
-			$495/3554 = 0.139$ & 1.000 \\ 
+			$495/3554 = 0.139$ & 1.000 \\
    \hline
 Total & $549/3921 = 0.140$ & $2827/3921 = 0.721$ &
 			$545/3921 = 0.139$ & 1.000 \\
@@ -1080,12 +1130,12 @@ A contingency table of the column proportions is computed in a similar way, wher
 \centering\small
 \begin{tabular}{l rrr r}
   \hline
- & none & small & big & Total \\ 
+ & none & small & big & Total \\
   \hline
 spam &  $149/549 = 0.271$ & $168/2827 = 0.059$ &
-				$50/545 = 0.092$ & $367/3921 = 0.094$ \\ 
+				$50/545 = 0.092$ & $367/3921 = 0.094$ \\
 not spam &  $400/549 = 0.729$ & $2659/2827 = 0.941$ &
-				$495/545 = 0.908$ & $3684/3921 = 0.906$ \\ 
+				$495/545 = 0.908$ & $3684/3921 = 0.906$ \\
    \hline
 Total & 1.000 & 1.000 & 1.000 & 1.000 \\
    \hline
@@ -1115,10 +1165,10 @@ If we generate the column proportions, we can see that a higher fraction of plai
 \centering
 \begin{tabular}{l cc r}
   \hline
- & text & HTML & Total \\ 
+ & text & HTML & Total \\
   \hline
-spam & 209 & 158 & 367 \\ 
-not spam & 986 & 2568 & 3554 \\ 
+spam & 209 & 158 & 367 \\
+not spam & 986 & 2568 & 3554 \\
    \hline
 Total & 1195 & 2726 & 3921 \\
    \hline
@@ -1189,7 +1239,7 @@ A \term{mosaic plot} is a graphical display of contingency table information tha
    \label{emailSpamNumberMosaicRev}
 \end{figure}
 
-This one-variable mosaic plot is further divided into pieces in Figure~\ref{emailSpamNumberMosaic} using the \var{spam} variable. Each column is split proportionally according to the fraction of emails that were spam in each number category. For example, the second column, representing emails with only small numbers, was divided into emails that were spam (lower) and not spam (upper). 
+This one-variable mosaic plot is further divided into pieces in Figure~\ref{emailSpamNumberMosaic} using the \var{spam} variable. Each column is split proportionally according to the fraction of emails that were spam in each number category. For example, the second column, representing emails with only small numbers, was divided into emails that were spam (lower) and not spam (upper).
 As another example, the bottom of the third column represents spam emails that had big numbers, and the upper part of the third column represents regular emails that had big numbers. We can again use this plot to see that the \var{spam} and \var{number} variables are associated since some columns are divided in different vertical locations than others, which was the same technique used for checking an association in the standardized version of the segmented bar plot.
 
 In a similar way, a mosaic plot representing row proportions of Table~\ref{emailSpamNumberTableTotals} could be constructed, as shown in Figure~\ref{emailSpamNumberMosaicRev}. However, because it is more insightful for this application to consider the fraction of spam in each category of the \var{number} variable, we prefer Figure~\ref{emailSpamNumberMosaic}.
@@ -1221,7 +1271,7 @@ There were 2,041 counties where the population increased from 2000 to 2010, and 
 \begin{table}
 \centering
 \begin{tabular}{ ccc ccc c ccc }
-\multicolumn{6}{c}{\bf population gain} && \multicolumn{3}{c}{\bf no gain} \\ 
+\multicolumn{6}{c}{\bf population gain} && \multicolumn{3}{c}{\bf no gain} \\
   \cline{1-6} \cline{8-10}
 41.2 & 33.1 & 30.4 & 37.3 & 79.1 & 34.5 &\hspace{5mm}\ & 40.3 & 33.5 & 34.8 \\
 22.9 & 39.9 & 31.4 & 45.1 & 50.6 & 59.4 && 29.5 & 31.8 & 41.3 \\
@@ -1300,10 +1350,10 @@ For each supervisor we record the gender associated with the assigned file and t
 \begin{tabular}{l l cc rr}
 & & \multicolumn{2}{c}{\var{decision}} \\
   \cline{3-4}
-		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\ 
+		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\
   \cline{2-5}
-		&	{male} 			& 21    		& 3   & 24  	 \\ 
-  \raisebox{1.5ex}[0pt]{\var{gender}}		&	{female} 	& 14    		& 10     & 24	 \\ 
+		&	{male} 			& 21    		& 3   & 24  	 \\
+  \raisebox{1.5ex}[0pt]{\var{gender}}		&	{female} 	& 14    		& 10     & 24	 \\
   \cline{2-5}
   		&	Total		& 35	& 13	&  48 \\
   \cline{2-5}
@@ -1341,10 +1391,10 @@ In this \term{simulation}, we thoroughly shuffle 48 personnel files, 24 labeled 
 \begin{tabular}{l l cc rr}
 & & \multicolumn{2}{c}{\var{decision}} \\
   \cline{3-4}
-		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\ 
+		&			& 	{promoted} 	& {not promoted} & Total & \hspace{3mm}  \\
   \cline{2-5}
-		&	\resp{male\_\hspace{0.3mm}sim} 					& 18    		& 6    & 24 	 \\ 
-  \raisebox{1.5ex}[0pt]{\var{gender\_\hspace{0.3mm}sim}}		&	\resp{female\_\hspace{0.3mm}sim} 	& 17    		& 7 & 24    	 \\ 
+		&	\resp{male\_\hspace{0.3mm}sim} 					& 18    		& 6    & 24 	 \\
+  \raisebox{1.5ex}[0pt]{\var{gender\_\hspace{0.3mm}sim}}		&	\resp{female\_\hspace{0.3mm}sim} 	& 17    		& 7 & 24    	 \\
   \cline{2-5}
   & Total	& 35 & 13 & 48
 \end{tabular}
@@ -1389,3 +1439,5 @@ Based on the simulations, we have two options. (1)~We conclude that the study re
 \index{data!discrimination|)}
 
 One field of statistics, statistical inference, is built on evaluating whether such differences are due to chance. In statistical inference, statisticians evaluate which model is most reasonable given the data. Errors do occur, just like rare events, and we might choose the wrong model. While we do not always choose correctly, statistical inference gives us tools to control and evaluate how often these errors occur. In Chapter~\ref{foundationsForInference}, we give a formal introduction to the problem of model selection. We spend the next two chapters building a foundation of probability and theory necessary to make that discussion rigorous.
+
+% ex:spelllang=pt
