@@ -16,14 +16,14 @@ Cientistas procuram responder questões usando métodos rigorosos e cuidadosas o
 \end{enumerate}
 A estatística foca nos 2-4 objetivos, rigorosamente, e eficientemente. Com foco nestas três premissas: Qual a melhor forma de coletar os dados ? Como deveria ser analisado ? E o que podemos inferir desta análise ?
 
-Os assuntos científicos são diversos como as questões por eles levantados. No entanto, muitas destas investigações podem ser abordadas com um peno número de técnicas de coleta de dados, ferramentas de analise, e conceito fundamental de inferência estatítica. Este capítulo trás uma introdução deste e outros temas que serão abordados neste livro. Introduzimos os princípios básicos de cada tópico e estudaremos algumas ferramentas. Iremos também trazer questões de outras áreas não tipicamente associadas com a ciência mas com um benefício importante no estudo da estatística.
+Os assuntos científicos são diversos como as questões por eles levantados. No entanto, muitas destas investigações podem ser abordadas com um peno número de técnicas de coleta de dados, ferramentas de análise, e conceito fundamental de inferência estatítica. Este capítulo traz uma introdução deste e outros temas que serão abordados neste livro. Introduzimos os princípios básicos de cada tópico e estudaremos algumas ferramentas. Iremos também trazer questões de outras áreas não tipicamente associadas com a ciência, mas com um benefício importante no estudo da estatística.
 
 \section[Estudo de caso: usando stents para prevenir infartos]{Estudo de caso: usando stents para prevenir infartos \sectionvideohref{youtube-nEHFF1ADpWE&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{basicExampleOfStentsAndStrokes}
 
 \index{data!stroke|(}
 
-Sessão~\ref{basicExampleOfStentsAndStrokes} introduz um desafio clássico em estatística: avaliando a eficiência de um tratamento médico. Abordado nesta sessao, e tambem no resto do capitulo com mais detalhes, e revisado ao fim do texto. O plano agora e simplesmente entendermos o papel que a estatística pode ter na prática.
+Sessão~\ref{basicExampleOfStentsAndStrokes} introduz um desafio clássico em estatística: avaliando a eficiência de um tratamento médico. Abordado nesta sessao, e tambem no resto do capítulo com mais detalhes, e revisado ao fim do texto. O plano agora e simplesmente entendermos o papel que a estatística pode ter na prática.
 
 Nesta sessão iremos considerar um experimento que estuda a eficácia dos stents no tratamento de paciente com risco de infarto.\footnote{Chimowitz MI, Lynn MJ, Derdeyn CP, et al. 2011. Stenting versus Aggressive Medical Therapy for Intracranial Arterial Stenosis. New England Journal of Medicine 365:993-1003. \oiRedirect{textbook-nejm_stent_study}{www.nejm.org/doi/full/10.1056/NEJMoa1105335}. NY Times article reporting on the study: \oiRedirect{textbook-nytimes_stent_study}{www.nytimes.com/2011/09/08/health/research/08stent.html}.} Stents são dispositivos instalados em vasos sanguíneos que ajudam a recuparação do paciente depois de um infarto e reduz o risco de um próximo infarto ou mesmo a morte. Muitos médicos acreditam em um benefício similar para paciente com risco de infarto. A principal questão a ser respondida é:
 \begin{quote}
@@ -57,7 +57,7 @@ $\vdots$	&	$\vdots$	  &	$\vdots$ \\
 % trmt <- c(rep('trmt', 224), rep('control', 227)); outcome30 <- c(rep(c('event', 'no_event'), c(33, 191)), rep(c('event', 'no_event'), c(13, 214))); outcome365 <- c(rep(c('event', 'no_event'), c(33, 191)), rep(c('event', 'no_event'), c(13, 214)))
 \end{table}
 %% parei#aqui
-Considerando os dados de cada paciente individualmente levaria muito tempo, um caminho não viável para responder a questão original da pesquisa. Portanto, fazendo-se uma análise de dados estátisticos nos permite considerar os dados de todos os pacientes de uma única vez. Table~\ref{stentStudyResults} resume os dados brutos de uma maneira mais útil. Nesta tabela, nós rapidamente vemos o que acontece no estudo completo. Identificamos o número de paciente no grupo de tratamento que tiveram infarto dentro de 30 dias, olhando a esquerda da table no cruzamento da coluna infarto com a linha tratamento: 33
+Considerando os dados de cada paciente individualmente levaria muito tempo, um caminho não viável para responder a questão original da pesquisa. Portanto, fazendo-se uma análise de dados estátisticos nos permite considerar os dados de todos os pacientes de uma única vez. Table~\ref{stentStudyResults} resume os dados brutos de uma maneira mais útil. Nesta tabela, nós rapidamente vemos o que acontece no estudo completo. Identificamos o número de paciente no grupo de tratamento que tiveram infarto dentro de 30 dias, olhando a esquerda da table no cruzamento da coluna Infarto com a linha Tratamento: 33
 
 \begin{table}[h]
 \centering
@@ -81,7 +81,7 @@ Dos 224 paciente no grupo de tratamento, 45 tiveram infarto no primeiro ano. Usa
     infarto no primeiro ano. (Nota: respostas para todos os exercícios práticos nas notas de página.)\footnote{A proporção dos 224 paciente que tiveram infarto no período de 365 dias: $45/224 = 0.20$.}
 \end{exercise}
 
-Podemos calcular uma sítese desta tabela. Ou seja um ``sumário estatístico'' é um número único que resume uma extensa quantidade de dados. \footnote{Formalmente, um sumário estatístico é um valor calculado dos dados. Alguns sumários estátisticos são mais úteis que outros. Por enquanto os resultados primários do estudo após 1~ano pode ser descrito por dois sumários estatísticos: a proporção de pessoas que tiveram infarto em tratamento pelas do grupo de tratamento.}
+Podemos calcular uma sítese desta tabela. Ou seja, um ``sumário estatístico'' é um número único que resume uma extensa quantidade de dados. \footnote{Formalmente, um sumário estatístico é um valor calculado dos dados. Alguns sumários estátisticos são mais úteis que outros. Por enquanto os resultados primários do estudo após 1~ano pode ser descrito por dois sumários estatísticos: a proporção de pessoas que tiveram infarto em tratamento pelas do grupo de tratamento.}
 
 \begin{itemize}
 \setlength{\itemsep}{0mm}
@@ -91,7 +91,7 @@ Podemos calcular uma sítese desta tabela. Ou seja um ``sumário estatístico'' 
 
 Estes dois sumários são úteis olhando as diferenças entre os grupos, nos causa surpresa : 8\% dos pacientes no grupo de tratamento tiveram infarto! Isto é importante por duas rasões. Primeiro, isto contraria o esperado pelos médicos, que acretitavam que o stents, poderiam \emph{reduzir} a taxa de infartos. Segundo, isto produz a seguinte questão estatística: os dados mostram uma ``real'' diferença entre os grupos?
 
-Sobre esta segunda questão surgida. Suponha que você jogue uma modeda 100 vezes. Enquanto a chance de dar cara é 50\%, provavelmente nós não observaremos esta probabilidade exatamente. Este tipo de flutuação é parte de quase qualquer tipo de geração de dados. É possível que a diferença de 8\% no estudo sobre stents, é uma variação normal. De quelquer forma diferenças maiores observadas (para um particular quantidade de dados), é menos confiável que seja apenas uma flutuação natural. Então devemos nos perguntar: esta diferença é grande o bastante para desprezarmos a possibilidade de flutuação natural na produção dos dados ?
+Sobre esta segunda questão surgida. Suponha que você jogue uma modeda 100 vezes. Enquanto a chance de dar cara é 50\%, provavelmente nós não observaremos esta probabilidade exatamente. Este tipo de flutuação é parte de quase qualquer tipo de geração de dados. É possível que a diferença de 8\% no estudo sobre stents, é uma variação normal. De qualquer forma, diferenças maiores observadas (para um particular quantidade de dados), é menos confiável que seja apenas uma flutuação natural. Então devemos nos perguntar: esta diferença é grande o bastante para desprezarmos a possibilidade de flutuação natural na produção dos dados ?
 
 Enquanto ainda não temos ferramentas estatísticas para abordarmos esta questão, nós poderiámos concluir por estas análises: existem evidências para desaconselhar o uso de stents neste estudo de pacientes cardíacos.
 
@@ -99,7 +99,7 @@ Enquanto ainda não temos ferramentas estatísticas para abordarmos esta questã
 
 \index{data!stroke|)}
 
-\section[Dados básico]{Dados básico \sectionvideohref{youtube-Mjif8PTgzUs&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
+\section[Dados básicos]{Dados básicos \sectionvideohref{youtube-Mjif8PTgzUs&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{dataBasics}
 
 Efetiva representação e descrição dos dados é o primeiro passo na maioria das análises. Esta sessão introduz uma estrutura para organização dos dados bem como alguma terminologia que será utilizada ao longo deste livro.
@@ -112,7 +112,7 @@ Table~\ref{email50DF} mostra colunas 1, 2, 3, e 50 do conjunto de dados relativo
 
 Cada linha na tabela representa um único email ou \term{caso}.\footnote{Um caso pode ser chamado também \term{unidade de observação} ou uma \term{unidade observacional}.} As colunas representam características, chamadas \termsub{variables}{variable}, para cada um dos emails. Por exemplo, a primeira linha representa email 1, o qual não é spam, contém 21, 705 caracteres, 551 quebras de linha, está escrito em no formato HTML, e contém apenas números pequenos.
 
-Na prática, é especialmente importante perguntar e deixar claro questões importante sobre os aspéctos dos dados a serem esntendidos. De agora em diante, será sempre importante estarmos certo do que cada variável significa e as unidade em que foram medidas. Descrições de todas as cinco variáveis dos emails dadas na tabela Table~\ref{email50Variables}.
+Na prática, é especialmente importante perguntar e deixar claro questões importantes sobre os aspéctos dos dados a serem esntendidos. De agora em diante, será sempre importante estarmos certo do que cada variável significa e as unidade em que foram medidas. Descrições de todas as cinco variáveis dos emails dadas na tabela Table~\ref{email50Variables}.
 \begin{table}[t]
 \centering
 \begin{tabular}{cc ccc c}
@@ -141,7 +141,7 @@ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
 \var{spam} & Especifica qualquer email spam \\
 \var{num\_\hspace{0.3mm}carac} & O número de caracteres do email \\
 \var{quebra\_\hspace{0.3mm}linha} & O número de quebra de linhas no email (não incluído continuação na linha seguinte)   \\
-\var{formato} & Indica se o email contém formato especial, como negrito, tableas ou links, os quais indicam que o email está em conteúdo formatado como HTML   \\
+\var{formato} & Indica se o email contém formato especial, como negrito, tabelas ou links, os quais indicam que o email está em conteúdo formatado como HTML   \\
     \var{número} & Indica que o email não está contido em nenhum número, num pequeno número (menos que 1 milhão), ou um número maior   \\
 \hline
 \end{tabular}
@@ -202,7 +202,7 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 \var{percápito\_\hspace{0.3mm}gasto} & Federal gasto perçapito \\
 \var{tx. de pobreza}  &  Percentual da população na pobreza \\
 \var{casa própria}  &  Percentual da população que possiu e mora em casa própria (crianças morando com pais que vivem em casas próprias) \\
-\var{multi}  &  Percentual de moradias que são várias unidade juntas (ex: apartamentos) \\
+\var{multi}  &  Percentual de moradias que são várias unidades juntas (ex: apartamentos) \\
 \var{renda} & Renda per capita \\
 \var{renda\_\hspace{0.3mm}média} & Median da renda da moradia, condirado o total da renda dos ocupantes da casa com idade igual ou superior a 15 anos \\
 \var{poluição\_disp\hspace{0.3mm}}  &  Tipo de município amplo e com satisfatória dispersão da poluíção até o fim de 2011, valores possíveis, um dos três:
@@ -221,7 +221,7 @@ Matriz de dados é um jeito conveniente para armazenar os dados. Se outro dado, 
 
 Examine o \var{gasto\_\hspace{0.3mm}federal}, \var{pop2010}, \var{estado}, and \var{disp\_\hspace{0.3mm}poluíção} variáveis no \data{county} conjunto de dados. Cada uma das variáveis é hierarquicamente diferente das outras com carcterísticas singulares.
 
-Primeiro consideramos \var{gasto\_\hspace{0.3mm}federal}, o qual foi dito ser variável \term{numérica} desde que isto pode ser uma longa faixa de valores, e isto é importante ser adicionado, subtraído, ou ter as médias deste valores. De outra forma, nós poderíamos classifica uma variável código de área telefonica como numérica, e a média, soma, diferença não ter significado claro algum.
+Primeiro consideramos \var{gasto\_\hspace{0.3mm}federal}, o qual foi dito ser variável \term{numérica} desde que isto pode ser uma longa faixa de valores, e isto é importante ser adicionado, subtraído, ou ter as médias destes valores. De outra forma, nós poderíamos classifica uma variável código de área telefonica como numérica, e a média, soma, diferença não ter significado claro algum.
 
 A variável \var{pop2010} também é numerica, apesar de parecer um pouco diferente de \var{gasto\_\hspace{0.3mm}federal}. Esta variável que conta a população apenas pode assumir valores não negativos (\resp{0}, \resp{1}, resp{2}, ...). Por esta razão, a variável da população é dita \term{discreta} desde que isto pode ser unicamente numera, e valores com saltos. De outra maneira, o gasto federal percápito é dita uma variável contínua
 
@@ -234,10 +234,10 @@ As variáveis \var{state} pode assumir até 51 valores como, alem de Washington,
 \label{variables}
 \end{figure}
 
-Finalmente, considere a variável \var{smoking\_\hspace{0.3mm}ban}, a qual descreve o tipo de county-wide somokin band e guarda valores \resp{none}, \resp{parcia}, ou \resp{comprehensive} em cada município. Esta variável parece ser híbrida: é categórica mas os níveis tem uma ordenação natural. Uma variável como esta propriedade é chamada \term{ordinal}, enquanto uma regular variavel categorica sem este tipo especial é conhecida \term{nominal}. Para simplificar as análises, qualquer variável neste livro será tratada como variáveis categóricas.
+Finalmente, considere a variável \var{smoking\_\hspace{0.3mm}ban}, a qual descreve o tipo de county-wide somokin band e guarda valores \resp{none}, \resp{parcia}, ou \resp{comprehensive} em cada município. Esta variável parece ser híbrida: é categórica, mas os níveis tem uma ordenação natural. Uma variável como esta propriedade é chamada \term{ordinal}, enquanto uma regular variavel categorica sem este tipo especial é conhecida \term{nominal}. Para simplificar as análises, qualquer variável neste livro será tratada como variáveis categóricas.
 
 \begin{example}{Dados onde são coletados estatísticas sobre os estudantes do curso. Três variáveis contém os seguintes itens: número de irmãos, altura, se o estudante já teve seus dados previamente verificados. Classifica cada uma das variáveis como numérica, discreta numérica ou categórica.}
-O número de irmãos e altura do estudante são representados por variáveis numéricas. O número de siblings é um contador discreto, as variáveis de altura são contínuas, então numérica contínua, e a útlima variável classfica os estudantes em duas categorias os que já tiveram e os quem não tiveram suas estatíticas auferidas, portanto uma variável categórica.
+O número de irmãos e altura do estudante são representados por variáveis numéricas. O número de siblings é um contador discreto, as variáveis de altura são contínuas, então numérica contínua, e a última variável classifica os estudantes em duas categorias os que já tiveram e os quem não tiveram suas estatísticas auferidas, portanto, uma variável categórica.
 \end{example}
 
 \begin{exercise} \index{data!stroke}
@@ -267,10 +267,10 @@ Para responder estas questões, os dados devem ser coletados, tais como \data{co
 \end{figure}
 
 \begin{exercise}
-Examine as variáveis no \data{email50} conjunto de dados, as quais estão descritas em Table~\vref{email50Variables}. Crie duas questões sobre o relacionamento entre aquelas variáveis do seu interece.\footnote{Duas questões de amostra: (1) Intuição sugere que se há muitas quebras de linhas em um email então há também a tendencia de ter muitos caracteres: Isto é verdade ? (2)~Há uma conexão entre se um formato de email é texto plano (ou HTML) ou se isto é uma mensagem de spam ?}
+Examine as variáveis no \data{email50} conjunto de dados, as quais estão descritas em Table~\vref{email50Variables}. Crie duas questões sobre o relacionamento entre aquelas variáveis do seu interece.\footnote{Duas questões de amostra: (1) Intuição sugere que se há muitas quebras de linhas em um email então há também a tendência de ter muitos caracteres: Isto é verdade ? (2)~Há uma conexão entre se um formato de email é texto plano (ou HTML) ou se isto é uma mensagem de spam ?}
 \end{exercise}
 
-O \var{fed\_\hspace{0.3mm}spend} e \var{poverty} variáveis são ditos associados por que o gráfco mostra um padrão distinto. Quando duas variáveis mostra alguma conexão com outra, são chamadas variáveis \term{associdas}. Variáveis associadas podem também serem chamados variáveis \term{dependentes} e vice-versa.
+O \var{fed\_\hspace{0.3mm}spend} e \var{poverty} variáveis são ditos associados por que o gráfco mostra um padrão distinto. Quando duas variáveis mostram alguma conexão com outra, são chamadas variáveis \term{associdas}. Variáveis associadas podem também serem chamados variáveis \term{dependentes} e vice-versa.
 
 \begin{example}{Este exemplo examina o relacionamento entre propriétarios de casas e a porcentagem de estruturas de unidades múltiplas (ex. apartamentos, condomínios), o qual visualizando usando o scatterplot em Figure~\ref{multiunitsVsOwnership}. Há variáveis associadas ?}
 Isto mostra que na maior fração de unidades em estruturas de unidades múltiplas, o baixo taxa de proprietários de moradia própria. Desde que haja um relacionamento entre as variáveis, elas são ditas associadas.
@@ -514,6 +514,8 @@ A simple random sample would likely draw individuals from all 30 villages, which
 
 
 %%%%%
+
+% ex:filetype=tex
 \section[Experimentos]{Experimentos \sectionvideohref{youtube-g7JGe_ykB3I&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{experimentsSection}
 
