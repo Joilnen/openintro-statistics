@@ -312,10 +312,10 @@ Considere as três questões de pesquisa que se seguem:
 \setlength{\itemsep}{0mm}
 \item Qual é a média de mercúrio contida nos peixes espadas do ocenano Atlântico?
 \item\label{timeToGraduationQuestionForUCLAStudents} Nos últmos 5 anos, qual o tempo médio para completar uma graduação para os estudantes na universidade de Duke?
-\item\label{identifyPopulationOfStentStudy} Uma nova droga consegue uma redução do número de mortes em pacientes com doênças cardíacas graves ? 
+\item\label{identifyPopulationOfStentStudy} Uma nova droga consegue uma redução do número de mortes em pacientes com doênças cardíacas graves ?
 \end{enumerate}
 
-Cada questão da pesquisa refere-se a \term{pupulação}. Na primeira questão, a população estudada são todos os peixes-espada do ocenando Atlântico, e cada peixe representa um caso. Algumas vezes, isto é muito caro coletar dados de cada caso na população. Em veze disso, uma amostra é tirada. Uma \term{amostra} representa um subconjunto dos casos e é frequententemente uma pesquena fração da população. Por agora, 60 peixes-espada (ou algum outro número na pupulação deve ser selecionada, e esta amostra pode ser usada para prover uma estimativa da media da população e responder a questão levantada pela pesquisa.
+Cada questão da pesquisa refere-se a \term{pupulação}. Na primeira questão, a população estudada são todos os peixes-espada do ocenando Atlântico, e cada peixe representa um caso. Algumas vezes, isto é muito caro coletar dados de cada caso na população. Em veze disso, uma amostra é tirada. Uma \term{amostra} representa um subconjunto dos casos e é frequententemente uma pesquena fração da população. Por agora, 60 peixes-espada (ou algum outro número) na pupulação deve ser selecionada, e esta amostra pode ser usada para prover uma estimativa da media da população e responder a questão levantada pela pesquisa.
 
 \begin{exercise} \label{identifyingThePopulationForTwoQuestionsInPopAndSampSubsection}
     Para a segunda e terceira questão, identificar a população alvo e o que representa o caso individual.\footnote{(\ref{timeToGraduationQuestionForUCLAStudents}) Note que a primeira questão é unicamente relevante para estudantes que completem sua graduação; a média não pode ser computada usando um estudante que nunca terminou sua graduação. Portanto, apenas estudantes de Duke que estão cursando são considerados. Cada um destes estudantes pdeveria representar um caso individual. (\ref{identifyPopulationOfStentStudy}) Uma pessoa com doença cardiáca grave representa um caso. A população inclui todas as pessoas com doênças cardiácas grave.}
@@ -548,7 +548,7 @@ Experimentos randomizados baseiam-se geralmente em quatro princípios.
 \begin{figure}
 \centering
 \includegraphics[width=0.78\textwidth]{ch_intro_to_data/figures/figureShowingBlocking/figureShowingBlocking}
-\caption{Agrupamento em blocos usando uma variável descrevendo o risco de paciente.
+\caption{Agrupamento em blocos} usando uma variável descrevendo o risco de paciente.
  Pacientes são primeiramente divididos entre blocos de baixo e alto risco, em seguida, usando randomização, cada bloco é uniformemente separado nos grupos de tratamento.
  Esta estratégia assegura uma representação uniforme de pacientes em cada grupo de tratamento das duas categorias, de alto e de baixo risco.
 \label{figureShowingBlocking}
@@ -560,6 +560,7 @@ Experimentos randomizados baseiam-se geralmente em quatro princípios.
  Esta estratégia referencia-se com frequência como \term{blocking} (agrupamento em blocos).
  Por exemplo, se estamos olhando o efeito de uma droga nos infartos, poderíamos primeiro separar pacientes no estudo em pacientes de alto e de baixo risco, em seguida aleatoriamente lotear uma metade dos pacientes de cada grupo no grupo de controle e a outra metade no grupo de tratamento, como mostrado em Figura~\ref{figureShowingBlocking}.
  Esta estratégia garante que cada grupo de tratamento tem um número igual de pacientes de alto e baixo risco.
+\end{description}
 
  É importante incorporar os primeiro três princípios de projeto em qualquer estudo, e este livro descreve métodos aplicáveis para analisar dados de tais experimentos.
  Blocking é uma técnica levemente mais avançada, e métodos estatísticos neste livro podem ser estendidos para analisar dados coletados usando blocking.
