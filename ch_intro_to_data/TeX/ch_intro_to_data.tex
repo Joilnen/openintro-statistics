@@ -381,20 +381,20 @@ Se alguém escolhe estamente quais estudantes serão incluídos na amostra, é p
 
 \APVersion{Sometimes a simple random sample is difficult to implement and an alternative method is helpful. One such substitute is a \term{systematic sample}, where one case is sampled after letting a fixed number of others, say 10 other cases, pass by. Since this approach uses a mechanism that is not easily subject to personal biases, it often yields a reasonably representative sample. This book will focus on random samples since the use of systematic samples is uncommon and requires additional considerations of the context.}{}
 
-O ato de escolher uma simples amostra aleatória ajuda a minimizar o viéz, de qualquer foirma o viéz também pode ser subitadmente debelado de outras formas.
-Mesmo quando as pessoas são escolhidas aleatoriamente, ex para amostra, deve-se ter cuidado se o \term{non-response}  \index{sample!non-response|textbf} é alto. Por agora, se unicamente 30\% das pessoas são escolhidas aleatóriamente para a responsta de uma pesquisa, então isto não é claro quais resultados são \term{representativos} da inteira população. Este \term{non-response viéz} \index{sample!non-response bias|textbf} pode enviezar os rultados.
+O ato de escolher uma simples amostra aleatória ajuda a minimizar o viéz, de qualquer forma o viéz também pode ser subitamente debelado de outras formas.
+Mesmo quando as pessoas são escolhidas aleatoriamente, ex para amostra, deve-se ter cuidado se o \term{non-response}  \index{sample!non-response|textbf} é alto. Por agora, se unicamente 30\% das pessoas são escolhidas aleatóriamente para a responsta de uma pesquisa, então isto não é claro quais resultados são \term{representativos} da inteira população. Este \term{non-response viéz} \index{sample!non-response bias|textbf} pode enviezar os resultados.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{ch_intro_to_data/figures/popToSample/surveySample}
-\caption{Due to the possibility of non-response, surveys studies may only reach a certain group within the population. It is difficult, and often times impossible, to completely fix this problem.}
+\caption{Devido a possibilidade de non-response, studos de amostras deveriam unicamente alcansar certos grupos na população. É dificil, e frequentemente impossível resolvert por completo este problema.}
 \label{surveySample}
 \end{figure}
 
-Another common downfall is a \term{convenience sample}\index{sample!convenience sample}, where individuals who are easily accessible are more likely to be included in the sample. For instance, if a political survey is done by stopping people walking in the Bronx, this will not represent all of New York City. It is often difficult to discern what sub-population a convenience sample represents.
+Outro problema comum é uma \term{amostra conveniente}\index{sample!convenience sample}, onde idivíduos que são facilmente acessíveis são mais frequentemente incluídos na amostra. Portanto, se uma amostra sobre politica é feita parando pedestres no Bronx, isto não irá representar toda a cidade de Nova York. Isto é frequentemente difícil de dicernir que parte da população produz uma amostra representativa.
 
 \begin{exercise}
-We can easily access ratings for products, sellers, and companies through websites. These ratings are based only on those people who go out of their way to provide a rating. If 50\% of online reviews for a product are negative, do you think this means that 50\% of buyers are dissatisfied with the product?\footnote{Answers will vary. From our own anecdotal experiences, we believe people tend to rant more about products that fell below expectations than rave about those that perform as expected. For this reason, we suspect there is a negative bias in product ratings on sites like Amazon. However, since our experiences may not be representative, we also keep an open mind.}
+Nós podemos facilmente acessar avaliações de produtos, vendedores e companias através de websites. Estas baseadas unicamente em como as pessoas expressão estas avaliações. Se 50\% das opiniões online sobre produtos forem negativos, você poderia pensar quw 50\% dos compradores estão insatisfeitos como o produto?\footnote{As respostas irão variar. Das experiência anedóticas e acredite as pessoas tendem a comentar mais dos produtos que não funcionam como esperado do sobre os que funcionam. Por esta rasão, nós suspeitamos que haja um viéz negativo nas avaliaçõs de produtos em sites como Amazon. De qualquer forma, esta experiência pode não ser representativa, então bom mantermos a mente aberta.}
 \end{exercise}
 
 \index{sample!random sample|)}
@@ -406,12 +406,14 @@ We can easily access ratings for products, sellers, and companies through websit
 
 \index{data!county|(}
 
-Consider the following question from page~\pageref{fedSpendingPovertyQuestion} for the \data{county} data set:
+Considere a questão seguinte de page~\pageref{fedSpendingPovertyQuestion}  para os dados\data{county} data set:
+
 \begin{enumerate}
 \item[(1)]
-	Is federal spending, on average, higher or lower in counties with high rates of poverty?
+    O gasto federal, na média, alto ou baixo nos municípioa com altas taxas de pobreza ?
 \end{enumerate}
-If we suspect poverty might affect spending in a county, then poverty is the \term{explanatory} variable and federal spending is the \term{response} variable in the relationship.\footnote{Sometimes the explanatory variable is called the \term{independent} variable and the response variable is called the \term{dependent} variable. However, this becomes confusing since a \emph{pair} of variables might be independent or dependent, so we avoid this language.} If there are many variables, it may be possible to consider a number of them as explanatory variables.
+
+Se suspeitamos que a pobreza afeta o gasto no município, entáo a pobreza é uma \term{explanatoria} e gasto federal como variável \term{resposta} no relacionamente.\footnote{Algumas vezes uma variável explanatória é chamada \term{indepdendete} e a variável resposta, \term{dependente}. De qualquer forma, isto fica confuso desde que o \emph{par} de variáveis pode ser dependente ou independente, então evitaremos estes termos.} Se há muitas variáveis provavlemnte um número delas devam ser consideradas como explanatórias.
 
 \begin{tipBox}{\tipBoxTitle{Explanatory and response variables}
 To identify the explanatory variable in a pair of variables, identify which of the two is suspected of affecting the other and plan an appropriate analysis.
@@ -781,9 +783,9 @@ De vez em quando um subscrito, como $_x$, é usado para representar a qual vari�
   O que seria uma abordagem melhor?
 } \label{wtdMeanOfIncome}
 O conjunto de dados \data{county} e especial em que cada county de fato representa muitas pessoas individuais.
-Se calculássemos simplesmente a média da variável \var{renda}, trataríamos conties com 5,000 e 5,000,000 habitantes de forma uniforma nos cálculos.
-Em vez disto, deveriamos calcular a renda total de cada county, e somar as somar de todos os counties, e depois dividir pela quantidade de pessoas em todos os counties.
-Se calculassemos a média simples da renda por pessoa entre todos os counties, o resultado teria sido só \$22,504.70!
+Se calculássemos simplesmente a média da variável \var{renda}, trataríamos municípios com 5,000 e 5,000,000 habitantes de forma uniforma nos cálculos.
+Em vez disto, deveriamos calcular a renda total de cada county, e somar as somar de todos os municípios, e depois dividir pela quantidade de pessoas em todos os municípios.
+Se calculassemos a média simples da renda por pessoa entre todos os municípios, o resultado teria sido só \$22,504.70!
 \end{example}
 
 Exe
