@@ -795,10 +795,16 @@ Porém, preparamos um suplemento online sobre meios ponderados para os leitores 
 \oiRedirect{textbook-weighted_mean_supplement}{www.openintro.org/stat/down/supp/wtdmean.pdf}
 \end{center}
 
-\subsection{Histograms and shape}
+\subsection{Histogramas e forma}
 \label{histogramsAndShape}
 
-Dot plots show the exact value for each observation. This is useful for small data sets, but they can become hard to read with larger samples. Rather than showing the value of each observation, we prefer to think of the value as belonging to a \emph{bin}. For example, in the \data{email50} data set, we create a table of counts for the number of cases with character counts between 0 and 5,000, then the number of cases between 5,000 and 10,000, and so on. Observations that fall on the boundary of a bin (e.g. 5,000) are allocated to the lower bin. This tabulation is shown in Table~\ref{binnedNumCharTable}. These binned counts are plotted as bars in Figure~\ref{email50NumCharHist} into what is called a \term{histogram}, which resembles the stacked dot plot shown in Figure~\ref{emailCharactersDotPlotStacked}.
+Traçados de pontos mostram o valor exato de cada observação.
+Isto é útil para conjuntos pequenos de dados, mas podem tornar-se difícil de ler com amostras maiores.
+Em vez de mostrar o valor de cada observação, preferimos pensar do valor como pertencendo a um recipiente.
+Por exemplo, no conjunto de dados \data{email50}, criamos uma tabela de contagens para o número de casos em que a contagem de números fica entre 0 e 5,000, depois o número de casos entre 5,000 e 10,000, e assim vai.
+Observações que caem na beira de um recipiente (por exemplo, 5,000) são loteadas ao recipiente mais baixo.
+Esta tabulação é mostrada em tabela~\ref{binnedNumCharTable}.
+Estas contagens armazenadas são traçadas como barras em figura~\ref{email50NumCharHist} em que se chama um \term{histograma}, o qual se assemelha o traçado de pontos empilhado em figura~\ref{emailCharactersDotPlotStacked}.
 
 \begin{table}[ht]
 \centering\small
@@ -810,58 +816,92 @@ Characters & \\
 Count & 19 & 12 & 6 & 2 & 3 & 5 & $\cdots$ & 0 & 1 \\
   \hline
 \end{tabular}
-\caption{The counts for the binned \var{num\_\hspace{0.3mm}char} data.}
+\caption{As contagens para os dados \var{num\_\hspace{0.3mm}char} armazenados.}
 \label{binnedNumCharTable}
 \end{table}
 
 \begin{figure}[bth]
    \centering
    \includegraphics[width=0.82\textwidth]{ch_intro_to_data/figures/email50NumCharHist/email50NumCharHist}
-   \caption{A histogram of \var{num\_\hspace{0.3mm}char}. This distribution is very strongly skewed to the right.\index{skew!example: very strong}}
+   \caption{Um histograma de \var{num\_\hspace{0.3mm}char}. Esta distribuição é fortemente enviesado à direita.\index{skew!example: very strong}}
    \label{email50NumCharHist}
 \end{figure}
 
-Histograms provide a view of the \term{data density}. Higher bars represent where the data are relatively more common. For instance, there are many more emails with fewer than 20,000 characters than emails with at least 20,000 in the data set. The bars make it easy to see how the density of the data changes relative to the number of characters.
+Histogramas proporcionam uma vista da \term{sensibilidade dos dados}.
+Barras maiores representam onde os dados são relativamente comuns.
+Por exemplo, há muito mais e-mails com menos de 20,000 caráteres do que e-mails com mais de 20,000 no último conjunto de dados.
+Estas barras facilitam a ver como a densidade dos dados muda com respeito ao número de caráteres.
 
-Histograms are especially convenient for describing the shape of the data distribution\label{shapeFirstDiscussed}. Figure~\ref{email50NumCharHist} shows that most emails have a relatively small number of characters, while fewer emails have a very large number of characters. When data trail off to the right in this way and have a longer right \hiddenterm{tail}\index{skew!tail}, the shape is said to be \termsub{right skewed}{skew!right skewed}.\footnote{Other ways to describe data that are skewed to the right: \termni{skewed to the right}, \termni{skewed to the high end}, or \termni{skewed to the positive end}.}
+Histogramas são especialmente convenientes para descrever a forma da distribuição dos dados\label{shapeFirstDiscussed}.
+Figura~\ref{email50NumCharHist} mostra que a maioria dos e-mails têm relativamente poucos caráteres, enquanto poucos outros têm uma grande quantidade de caráteres.
+Quando dados diminuem à direita nesta forma e têm à direita um rabo mais cumprido \hiddenterm{tail}\index{skew!tail}, a forma é chamada \termsub{enviesada à direita}{skew!right skewed}.
+\footnote{Outras maneiras para descrever dados enviesadas para a direita:
+\termni{enviesados à direita}, \termni{enviesados à ponta alta}, or \termni{enviesados à ponta positiva}.}
 
-Data sets with the reverse characteristic -- a long, thin tail to the left -- are said to be \termsub{left skewed}{skew!left skewed}. We also say that such a distribution has a long left tail. Data sets that show roughly equal trailing off in both directions are called \term{symmetric}.\index{skew!symmetric}
+Conjuntos de dados com a característica inversa -- um rabo cumprido, fino à esquerda -- chamam-se \termsub{enviesadas à esquerda}{skew!left skewed}.
+Dizemos também que uma tal distribuição tem um rabo cumprido à esquerda.
+Conjuntos de dados que mostram mais ou menos uma diminuição igual em ambos sentidos chamam-se \term{simétricos}.\index{skew!symmetric}
 
-\begin{termBox}{\tBoxTitle{Long tails to identify skew}%
-When data trail off in one direction, the distribution has a \term{long tail}. \index{skew!long tail|textbf} If a distribution has a long left tail, it is left skewed. If a distribution has a long right tail, it is right skewed.}
+\begin{termBox}{\tBoxTitle{Rabos cumpridos para identificar enviesado}%
+ Quando dados diminuem em uma direção, a distribuição tem um \term{rabo cumprido}.
+  \index{skew!long tail|textbf}
+  Se uma distribuição tem um rabo cumprido à esquerda, é enviesada à esquerda.
+  Se uma distribuição tem um rabo cumprido à direita, é enviesada à direita.}
 \end{termBox}
 
 \begin{exercise}
-Take a look at the dot plots in Figures~\ref{emailCharactersDotPlot} and~\ref{emailCharactersDotPlotStacked}. Can you see the skew in the data? Is it easier to see the skew in this histogram or the dot plots?\footnote{The skew is visible in all three plots, though the flat dot plot is the least useful. The stacked dot plot and histogram are helpful visualizations for identifying skew.}
+ Olhe aos pontos traçados em Figuras~\ref{emailCharactersDotPlot} e~\ref{emailCharactersDotPlotStacked}.
+ Podes reparar o enviesado nestes dados?
+ Fica mais fácil ver o enviesado neste histograma ou no traçado dos pontos?
+ \footnote{O enviesado é visível em todos os três traçados, embora o traçado plano é o menos útil.
+ O traçado empilhado e o histograma ajudam a visualizar o enviesado.}
 \end{exercise}
 
 \begin{exercise}
-Besides the mean (since it was labeled), what can you see in the dot plots that you cannot see in the histogram?\footnote{Character counts for individual emails.}
+ Além da média (porque rotulada), o quê podemos ver nos traçados dos pontos que não podemos ver no histograma?
+ \footnote{Contagens de caráteres para e-mails individuais.}
 \end{exercise}
 
-In addition to looking at whether a distribution is skewed or symmetric, histograms can be used to identify modes. A \term{mode} is represented by a prominent peak in the distribution.\footnote{Another definition of mode, which is not typically used in statistics, is the value with the most occurrences. It is common to have \emph{no} observations with the same value in a data set, which makes this other definition useless for many real data sets.} There is only one prominent peak in the histogram of \var{num\_\hspace{0.3mm}char}.
+Fora de examinar se uma distribuição é enviesada ou simétrica, histogramas podem ser usados para identificar modos.
+Um \term{modo} é representado por um pico conspícuo na distribuição.
+\footnote{Outra definição de modo, não tipicamente usada em estatística, e o valor com a maioria das ocorrências.
+É comum ter nenhuma observação com o mesmo valor no conjunto de dados, o que torna esta outra definição fútil para muitos conjuntos de dados reais.}
+Só existe um pico conspícuo no histograma de \var{num\_\hspace{0.3mm}char}.
 
-Figure~\ref{singleBiMultiModalPlots} shows histograms that have one, two, or three prominent peaks. Such distributions are called \termsub{unimodal}{modality!unimodal}, \termsub{bimodal}{modality!bimodal}, and \termsub{multimodal}{modality!multimodal}, respectively. Any distribution with more than 2 prominent peaks is called multimodal. Notice that there was one prominent peak in the unimodal distribution with a second less prominent peak that was not counted since it only differs from its neighboring bins by a few observations.
+Figura~\ref{singleBiMultiModalPlots} mostra histogramas que têm um, dois, ou três pico conspícuos.
+Tais distribuições chamam-se \termsub{unimodais}{modality!unimodal}, \termsub{bimodais}{modality!bimodal}, e \termsub{multimodais}{modality!multimodal}, respetivamente.
+Qualquer distribuição com mais de dois pico conspícuos chama-se multimodal.
+Observe-se que há um pico conspícuo na distribuição unimodal com um pico menos conspícuo, o qual não foi contado, porque só difere dos recipientes vizinhos por umas poucas observações.
 
 \begin{figure}[h]
    \centering
    \includegraphics[width=\textwidth]{ch_intro_to_data/figures/singleBiMultiModalPlots/singleBiMultiModalPlots}
-   \caption{Counting only prominent peaks, the distributions are (left to right) unimodal, bimodal, and multimodal.}
+   \caption{Contando só picos conspícuos, as distribuições são (da esquera à direita) unimodais, bimodais, e multimodais.}
    \label{singleBiMultiModalPlots}
 \end{figure}
 
 \begin{exercise}
-Figure~\ref{email50NumCharHist} reveals only one prominent mode in the number of characters. Is the distribution unimodal, bimodal, or multimodal?\footnote{Unimodal. Remember that \emph{uni} stands for 1 (think \emph{uni}cycles). Similarly, \emph{bi} stands for~2 (think \emph{bi}cycles). (We're hoping a \emph{multicycle} will be invented to complete this analogy.)}
+ Figura~\ref{email50NumCharHist} revela só um modo conspícuo no número de caráteres.
+ A distribuição, ela é unimodal, bimodal, or multimodal?
+ \footnote{Unimodal.
+  Lembre-se que \emph{uni} designa 1 (pensa em \emph{uni}color).
+  Semelhantemente, \emph{bi} designa 2 (pensa em \emph{bi}color).
+  Para dar continuidade, \emph{multi} designa muitos (pensa em \emph{multi}color).
+ }
 \end{exercise}
 
 \begin{exercise}
-Height measurements of young students and adult teachers at a K-3 elementary school were taken. How many modes would you anticipate in this height data set?\footnote{There might be two height groups visible in the data set: one of the students and one of the adults. That is, the data are probably bimodal.}
+ Foram medidas a altura de estudantes novos e professores adultos numa escola elementária.
+ Quantos modos anteciparias neste conjunto de dados de altura?
+ \footnote{Provavelmente existem dois grupos de altura no conjunto de dados:
+  um dos estudantes, e um dos adultos.
+ Isto é, os dados são bimodais.}
 \end{exercise}
 
 \begin{tipBox}{\tipBoxTitle{Looking for modes}
-Looking for modes isn't about finding a clear and correct answer about the number of modes in a distribution, which is why \emph{prominent} is not rigorously defined in this book. The important part of this examination is to better understand your data and how it might be structured.}
+  Procurando modos não é uma questao de achar uma resposta clara e correta sobre o número de modos numa distribuição, e é por isso que \emph{conspícuo} não é rigorosamente definido neste livro.
+ A parte importante desta examinação é entender melhor os seus dados e de qual maneira são estruturados.}
 \end{tipBox}
-
 
 \subsection{Variance and standard deviation}
 \label{variability}
