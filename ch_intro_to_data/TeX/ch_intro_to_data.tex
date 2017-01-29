@@ -616,111 +616,179 @@ Para guardar contra este bias, que comprovadamente tem um efeito mensurável em 
 \end{exercise}
 
 %%%%%
-\section[Examining numerical data]{Examining numerical data \sectionvideohref{youtube-Xm0PPtci3JE&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
+\section[Examinando dados numéricos]{Examinando dados numéricos \sectionvideohref{youtube-Xm0PPtci3JE&list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8}}
 \label{numericalData}
 
-In this section we will be introduced to techniques for exploring and summarizing numerical variables. The \data{email50} and \data{county} data sets from Section~\ref{dataBasics} provide rich opportunities for examples. Recall that outcomes of numerical variables are numbers on which it is reasonable to perform basic arithmetic operations. For example, the \var{pop2010} variable, which represents the populations of counties in 2010, is numerical since we can sensibly discuss the difference or ratio of the populations in two counties. On the other hand, area codes and zip codes are not numerical, but rather they are~categorical variables.
+Nesta seção introduzimos as técnicas para explorar e sumarizar variáveis numéricas.
+Os conjuntos de dados \data{email50} e \data{county} da Seção~\ref{dataBasics} fornecem
+The \data{email50} and \data{county} data sets from Section~\ref{dataBasics} proporcionam ricas oportunidades para exemplos.
+Lembramos que resultados de variáveis numéricas são números sobre os quais é razoável fazer operações aritméticas básicas.
 
+Por exemplo, a variável \var{pop2010}, que representa a população dos counties em 2010, é numérica porque podemos ajuizadamente discutir as diferenças ou proporção das populações em dois países.
+De outro lado, códigos de areá ou códigos postais não são numéricas, mas mais propriamente variáveis~categóricas.
 
-\subsection{Scatterplots for paired data}
+\subsection{Scatterplots para dados emparelhados}
 \label{scatterPlots}
 
 \index{data!email50|(}
 
-A \term{scatterplot} provides a case-by-case view of data for two numerical variables. In Figure~\vref{county_fed_spendVsPoverty}, a scatterplot was used to examine how federal spending and poverty were related in the \data{county} data set. Another scatterplot is shown in Figure~\ref{email50LinesCharacters}, comparing the number of line breaks (\var{line\_\hspace{0.3mm}breaks}) and number of characters (\var{num\_\hspace{0.3mm}char}) in emails for the \data{email50} data set. In any scatterplot, each point represents a single case. Since there are 50 cases in \data{email50}, there are 50 points in Figure~\ref{email50LinesCharacters}.
+Um \term{scatterplot} proporciona uma vista em cada caso específico dos dados para dois variáveis numéricas.
+Em figura~\vref{county_fed_spendVsPoverty}, um scatterplot foi usado para examinar como despesas federais e pobreza se relacionam no conjunto de dados \data{county}.
+Outro scatterplot vê-se em figura~\ref{email50LinesCharacters}, comparando o número de quebras de linha (\var{line\_\hspace{0.3mm}breaks}) e o número de caráteres (\var{num\_\hspace{0.3mm}char}) em e-mails do conjunto de dados \data{email50}.
+Em qualquer scatterplot, cada ponto representa um caso especifico.
+Porque há 50 casos em \data{email50}, há 50 pontos em figura~\ref{email50LinesCharacters}.
 
 \textC{\setlength{\captionwidth}{0.9\textwidth}}
 
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.8\textwidth]{ch_intro_to_data/figures/email50LinesCharacters/email50LinesCharacters}
-   \caption{A scatterplot of \var{line\_\hspace{0.3mm}breaks} versus \var{num\_\hspace{0.3mm}char} for the \data{email50} data.}
+   \caption{Um scatterplot de \var{line\_\hspace{0.3mm}breaks} versos \var{num\_\hspace{0.3mm}char} para os dados \data{email50}.}
    \label{email50LinesCharacters}
 \end{figure}
 
 \textC{\setlength{\captionwidth}{\mycaptionwidth}}
 
-To put the number of characters in perspective, this paragraph has 363 characters. Looking at Figure~\ref{email50LinesCharacters}, it seems that some emails are incredibly verbose! Upon further investigation, we would actually find that most of the long emails use the HTML format, which means most of the characters in those emails are used to format the email rather than provide text.
+Para pôr o número de caráteres em perspectiva, este parágrafo tem 999 caráteres.
+Olhando à figura~\ref{email50LinesCharacters}, parece que uns e-mails foram incrivelmente verbosos!
+Investigando mais, pudermos descobrir que a maioria dos e-mails longos usam o formato HTML, o que significa que a maioria dos carateres nesses e-mails é usada para formatar o e-mail, ao invés de fornecer texto.
 
 \begin{exercise}
-What do scatterplots reveal about the data, and how might they be useful?\footnote{Answers may vary. Scatterplots are helpful in quickly spotting associations relating variables, whether those associations come in the form of simple trends or whether those relationships are more complex.}
+ O quê revelam scatterplots sobre os dados, e como poderiam ser uteis?
+ \footnote{
+  Respostas podem variar.
+  Scatterplots são uteis para rapidamente reparar associações entre variáveis relacionadas, quer que estas associações vêm na forma de tendências simples ou esses relacionamentos são mais complexos.
+ }
 \end{exercise}
 
 \index{data!cars|(}
-\begin{example}{Consider a new data set of 54 cars with two variables: vehicle price and~weight.\footnote{Subset of data from \oiRedirect{textbook-1993_car_data}{www.amstat.org/publications/jse/v1n1/datasets.lock.html}} A scatterplot of vehicle price versus weight is shown in Figure~\ref{carsPriceVsWeight}. What can be said about the relationship between these variables?}
-The relationship is evidently nonlinear, as highlighted by the dashed line. This is different from previous scatterplots we've seen, such as Figure~\vref{county_fed_spendVsPoverty} and Figure~\ref{email50LinesCharacters}, which show relationships that are very linear.
+\begin{example}{
+  Considera o novo conjunto de dados de 54 caráteres de duas variáveis:
+  preço de veiculo e~peso.
+  \footnote{
+   Conjunto de dados de \oiRedirect{textbook-1993_car_data}{www.amstat.org/publications/jse/v1n1/datasets.lock.html}
+  }
+  Um scatterplot de preço de veiculo versus peso é mostrado em figura~\ref{carsPriceVsWeight}.
+  O quê pode ser dito sobre a relação entre estas duas variáveis?
+}
+A relação é evidentemente não-linear, como destacado pela linha tracejada.
+Isto difere de scatterplots antigos que vimos, tal como figura~\vref{county_fed_spendVsPoverty} e figura~\ref{email50LinesCharacters}, que mostram relações bem lineares.
 
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.8\textwidth]{ch_intro_to_data/figures/carsPriceVsWeight/carsPriceVsWeight}
-   \caption{A scatterplot of \var{price} versus \var{weight} for 54 cars.}
+   \caption{Um scatterplot de \var{preço} versus \var{peso} para 54 carros.}
    \label{carsPriceVsWeight}
 \end{figure}
 \end{example}
 \index{data!cars|)}
 
 \begin{exercise}
-Describe two variables that would have a horseshoe shaped association in a scatterplot.\footnote{Consider the case where your vertical axis represents something ``good'' and your horizontal axis represents something that is only good in moderation. Health and water consumption fit this description since water becomes toxic when consumed in excessive quantities.}
+ Descreva duas variaveis que teriam uma associação em forma de um ferradura em um scatterplot
+
+ \footnote{
+   Considera o caso em que o eixo vertical representa algo ``bom'' e o eixo horizontal representa algo que é só bom com moderação.
+  Saúde e consumo de água cabem esta descrição porque água torna-se toxica quando consumido em quantidades excessivas.
+ }
 \end{exercise}
 
-\subsection{Dot plots and the mean}
+\subsection{Traçados de pontos e a média}
 \label{dotPlot}
 
-Sometimes two variables are one too many: only one variable may be of interest. In these cases, a dot plot provides the most basic of displays. A~\term{dot plot} is a one-variable scatterplot; an example using the number of characters from 50 emails is shown in Figure~\ref{emailCharactersDotPlot}. A stacked version of this dot plot is shown in Figure~\ref{emailCharactersDotPlotStacked}.
+As vezes duas variáveis são uma demais:
+Só uma pode ser interessante.
+Nestes casos, um traçado de pontos fornece a exposição mais básica entre todas.
+Um~\term{traçado de pontos} é um scatterplot de uma variável;
+um exemplo usando o número de carateres de 50 e-mails é mostrado em figura~\ref{emailCharactersDotPlot}.
+Uma versão empilhada deste traçado de pontos é mostrado em figura~\ref{emailCharactersDotPlotStacked}.
 
 \begin{figure}[h]
    \centering
    \includegraphics[width=\textwidth]{ch_intro_to_data/figures/emailCharactersDotPlot/emailCharactersDotPlot}
-   \caption{A dot plot of \var{num\_\hspace{0.3mm}char} for the \data{email50} data set.}
+   \caption{Um traçado de pontos de \var{num\_\hspace{0.3mm}char} para o conjunto de dados \data{email50}.}
    \label{emailCharactersDotPlot}
 \end{figure}
 
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.72\textwidth]{ch_intro_to_data/figures/emailCharactersDotPlot/emailCharactersDotPlotStacked}
-   \caption{A stacked dot plot of \var{num\_\hspace{0.3mm}char} for the \data{email50} data set. The~values have been rounded to the nearest 2,000 in this plot.}
+   \caption{
+    Um traçado de pontos empilhado de \var{num\_\hspace{0.3mm}char} para o conjunto de dados \data{email50}.
+    Os~valora foram arredondados para o mais próximo 2,000 neste traçado.
+   }
    \label{emailCharactersDotPlotStacked}
 \end{figure}
 
-The \term{mean}, sometimes called the \indexthis{average}{mean!average}, is a common way to measure the center of a \term{distribution} of data. To find the mean number of characters in the 50 emails, we add up all the character counts and divide by the number of emails. For computational convenience, the number of characters is listed in the thousands and rounded to the first~decimal.
+O \term{meio}, as vezes chamado a \indexthis{média}{mean!average}, é uma maneira comum para medir o centro de uma distribuição de dados.
+Para encontrar o número médio de caráteres nos 50 e-mails, adicionamos todas as contagens de caráteres e dividimos pelo número de e-mails.
+Para facilitar o cálculo, o número de caráteres é alistado em múltiplos de mil e arredondado ao primeiro~decimal.
 \begin{eqnarray}
 \bar{x} = \frac{21.7 + 7.0 + \cdots + 15.8}{50} = 11.6
 \label{sampleMeanEquation}
 \end{eqnarray}
-The sample mean is often labeled $\bar{x}$\marginpar[\raggedright$\bar{x}$\\\footnotesize sample\\ mean]{\raggedright$\bar{x}$\\\footnotesize sample\\ mean}. The letter $x$ is being used as a generic placeholder for the variable of interest, \var{num\_\hspace{0.3mm}char}, and the bar over on the $x$ communicates that the average number of characters in the 50 emails was 11,600. It is useful to think of the mean as the balancing point of the distribution. The sample mean is shown as a triangle in Figures~\ref{emailCharactersDotPlot} and~\ref{emailCharactersDotPlotStacked}.
+O meio de uma amostra é frequentemente etiquetado $\bar{x}$\marginpar[\raggedright$\bar{x}$\\\footnotesize meio de\\ amostra]{\raggedright$\bar{x}$\\\footnotesize meio de\\ amostra}.
+A letra $x$ é usada como símbolo reservado para a variável de interesse, \var{num\_\hspace{0.3mm}char}, e o bar sobre a letra $x$ simboliza que o número médio de caráteres nos 50 e-mails foi 11,600.
+É proveitoso pensar do meio como ponto de balança da distribuição.
+O meio de amostra é indicado como triangulo em figurar~\ref{emailCharactersDotPlot} e~\ref{emailCharactersDotPlotStacked}.
 
 \begin{termBox}{\tBoxTitle{Mean}%
-The sample mean of a numerical variable is computed as the sum of all of the observations divided by the number of observations:
+  O meio de amostra de uma variável numérica é calculado como soma de todas as observações dividida pelo número de observações:
 \begin{eqnarray}
 \bar{x} = \frac{x_1+x_2+\cdots+x_n}{n}
 \label{meanEquation}
 \end{eqnarray}
-where $x_1, x_2, \dots, x_n$ represent the $n$ observed values.}
+onde $x_1, x_2, \dots, x_n$ representam os $n$ valores observados.}
 \end{termBox}\marginpar[\raggedright\vspace{-8mm}
 
-$n$\\\footnotesize sample size]{\raggedright\vspace{-8mm}
+$n$\\\footnotesize tamanho de amostra]{\raggedright\vspace{-8mm}
 
-$n$\\\footnotesize sample size}\vspace{-2mm}
+$n$\\\footnotesize tamanho de amostra}\vspace{-2mm}
 
 \begin{exercise}
-Examine Equations~\eqref{sampleMeanEquation} and~\eqref{meanEquation} above. What does $x_1$ correspond to? And $x_2$? Can you infer a general meaning to what $x_i$ might represent?\footnote{$x_1$ corresponds to the number of characters in the first email in the sample (21.7, in thousands), $x_2$ to the number of characters in the second email (7.0, in thousands), and $x_i$ corresponds to the number of characters in the $i^{th}$ email in the data set.}
+ Examine Equações~\eqref{sampleMeanEquation} e~\eqref{meanEquation} acima.
+ Ao quê corresponde $x_1$?
+ E $x_2$?
+ Podes inferir um significado geral ao que $x_i$ representa?
+ \footnote{
+  $x_1$ corresponde ao número de caráteres no primerio e-mail na amostra (21.7, em milhares), $x_2$ ao número de caráteres no segundo e-mail (7.0, em milhares), e $x_i$ corresponde ao número de caráteres no e-mail número $i$ no conjunto de dados.
+ }
 \end{exercise}
 
 \begin{exercise}
-What was $n$ in this sample of emails?\footnote{The sample size was $n=50$.}
+ O quê foi $n$ nesta amostra de e-mails?
+ \footnote{O tamanho da amostra foi $n=50$.}
 \end{exercise}
 
-The \data{email50} data set represents a sample from a larger population of emails that were received in January and March. We could compute a mean for this population in the same way as the sample mean, however, the population mean has a special label: $\mu$\marginpar[\raggedright$\mu$\\\footnotesize population\\ mean]{\raggedright$\mu$\\\footnotesize population\\ mean}. \index{Greek!mu@mu ($\mu$)} The symbol $\mu$ is the Greek letter \emph{mu} and represents the average of all observations in the population. Sometimes a subscript, such as $_x$, is used to represent which variable the population mean refers to, e.g. $\mu_x$.
+O conjunto de dados \data{email50} representa uma amostra de uma população maior de e-mails que foi recebida em janeiro e março.
+Poderíamos calcular o meio desta população do mesmo jeito como no meio de amostra, porém, o meio de população tem um letreiro especial:
+$\mu$\marginpar[\raggedright$\mu$\\\footnotesize meio de \\ população]{\raggedright$\mu$\\\footnotesize meio de\\ população}.
+\index{Greek!mu@mu ($\mu$)} O símbolo $\mu$ é a letra grega \emph{mu} e representa a média de todas as observações na população.
+De vez em quando um subscrito, como $_x$, é usado para representar a qual variável o meio de população refere, por exemplo $\mu_x$.
 
-\begin{example}{The average number of characters across all emails can be estimated using the sample data. Based on the sample of 50 emails, what would be a reasonable estimate of $\mu_x$, the mean number of characters in all emails in the \data{email} data set? (Recall that \data{email50} is a sample from \data{email}.)}
-The sample mean, 11,600, may provide a reasonable estimate of $\mu_x$. While this number will not be perfect, it provides a \emph{point estimate} of the population mean. In Chapter~\ref{foundationsForInference} and beyond, we will develop tools to characterize the accuracy of point estimates, and we will find that point estimates based on larger samples tend to be more accurate than those based on smaller samples.
+\begin{example}{
+  O número médio de todos os caráteres em todos os e-mails pode ser estimado usando os dados de amostra.
+  Baseando-se na amostra de 50 e-mails, o que seria uma estimativa razoável de $\mu_x$, o número médio de caráteres em todos os e-mail no conjunto de dados \data{email}?
+ (Lembre-se que \data{email50} é uma amostra de \data{email}.)}
+ O meio de amostra, 11,600, pode proporcionar uma estimativa razoável de $\mu_x$.
+ Enquanto este número não será perfeito, fornece uma estimativa de ponto do meio da população.
+ Em capítulo~\ref{foundationsForInference} e além, desenvolvermos ferramentas para caraterizar a exatidão de estimativas de ponto, e encontraremos que estimativas de pontos que são baseadas em amostras maiores tendem a ser mais exatas que as baseadas em amostras menores.
 \end{example}
 
-\begin{example}{We might like to compute the average income per person in the US. To do so, we might first think to take the mean of the per capita incomes across the 3,143 counties in the \data{county} data set. What would be a better approach?} \label{wtdMeanOfIncome}
-The \data{county} data set is special in that each county actually represents many individual people. If we were to simply average across the \var{income} variable, we would be treating counties with 5,000 and 5,000,000 residents equally in the calculations. Instead, we should compute the total income for each county, add up all the counties' totals, and then divide by the number of people in all the counties. If we completed these steps with the \data{county} data, we would find that the per capita income for the US is \$27,348.43. Had we computed the \emph{simple} mean of per capita income across counties, the result would have been just \$22,504.70!
+\begin{example}{
+
+  Poderiamos gostar de calcular a renda média por pessoa nos estados unidos.
+  Para isto, poderiamos primeiro pensar em medir a média das rendas por pessoa entre todos os 3,143 counties no conjunto de dados \data{county}.
+  O que seria uma abordagem melhor?
+} \label{wtdMeanOfIncome}
+O conjunto de dados \data{county} e especial em que cada county de fato representa muitas pessoas individuais.
+Se calculássemos simplesmente a média da variável \var{renda}, trataríamos conties com 5,000 e 5,000,000 habitantes de forma uniforma nos cálculos.
+Em vez disto, deveriamos calcular a renda total de cada county, e somar as somar de todos os counties, e depois dividir pela quantidade de pessoas em todos os counties.
+Se calculassemos a média simples da renda por pessoa entre todos os counties, o resultado teria sido só \$22,504.70!
 \end{example}
 
-Example~\ref{wtdMeanOfIncome} used what is called a \term{weighted mean}\index{mean!weighted mean}, which will not be a key topic in this textbook. However, we have provided an online supplement on weighted means for interested readers:
+Exe
+Exemplo~\ref{wtdMeanOfIncome} usou o que se chama um \term{meio ponderado}\index{mean!weighted mean}, o qual não será um assunto chave neste livro.
+Porém, preparamos um suplemento online sobre meios ponderados para os leitores interessados:
 \begin{center}
 \oiRedirect{textbook-weighted_mean_supplement}{www.openintro.org/stat/down/supp/wtdmean.pdf}
 \end{center}
